@@ -1,0 +1,41 @@
+.btn-primary {
+    background-color: #6528F7 !important;
+}
+
+.link-secondary {
+    color: #6528F7 !important;
+}
+
+.add-image-btn{
+    padding-left: 38%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    border-radius: 5px;
+    background-color: #6528F7;
+    color: white;
+}
+
+.custom-file-upload input[type='file'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+
