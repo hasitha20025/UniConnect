@@ -2,6 +2,11 @@
     background-color: #6528F7 !important;
 }
 
+.bg-body-secondary  {
+    
+}
+
+
 .btn-outline-primary {
 
     color: #6528F7 !important;
@@ -24,6 +29,9 @@
 
 }
 
+.them-color {
+    color:  #6528F7 !important;
+}
 
 
 
