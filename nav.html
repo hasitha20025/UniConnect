@@ -1,26 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <div class="container mb-5">
-        <!-- side nav bar-->
-    
-        <nav class="navbar  fixed-top mt-0">
-          <!--nav bar color-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nav bar</title>
+
+    <link rel="shortcut icon" href="./picuters/logo/2-b.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+
+  </head>
+  <body>
+
+    <div class="container"> <!--top nav bar-->
+
+      <nav class="navbar fixed-top " style="background-color: ">
           <div class="container bg-body-tertiary shadow p-2 mb-1 bg-body-tertiary rounded">
-            <a class="navbar-brand" href="./index.html"><span><img src="./picuters/logo/2-b.png" width="65" height="65"></span> <span>UniConnect</span></a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-    
-              <div class="offcanvas-header px-3">
+
+          <a class="navbar-brand" href="./index.html">           
+              <span><img src="./picuters/logo/2-b.png" width="60" height="60"></span>
+                <span>UniConnect</span> 
+                 <span class="px-0"> </span> 
+          </a>
+
+          <div class="row">
+             <div class="col-auto py-2">
+              <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#notifictions" aria-controls="notifictions"><img src="./picuters/icons/bell-fill.svg" alt="" width="20" height="20"></button>
+
+             </div>
+             <div class="col-auto py-2">
+              <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#nav-bar" aria-controls="nav-bar"><img src="./picuters/icons/Menu.svg" alt="" width="30" height="30"></button>
+             </div>
+           
+         </div>
+        </div>
+      </nav>
+
+
+
+        <!--notifications-->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="notifictions" aria-labelledby="offcanvasScrollingLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Notifications</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <p> </p>
+
+            <div class="alert alert-primary" role="alert">
+              A simple primary alert with <a href="#" class="alert-link">See More</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-secondary" role="alert">
+              A simple secondary alert with <a href="#" class="alert-link">See More</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-success" role="alert">
+              A simple success alert with <a href="#" class="alert-link">See More</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-danger" role="alert">
+              A simple danger alert with <a href="#" class="alert-link">See More</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-warning" role="alert">
+              A simple warning alert with <a href="#" class="alert-link">See More</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-info" role="alert">
+              A simple info alert with <a href="#" class="alert-link">See More</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-light" role="alert">
+              A simple light alert with <a href="#" class="alert-link">See More</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-dark" role="alert">
+              A simple dark alert with <a href="#" class="alert-link">See More</a>. Give it a click if you like.
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+        <!--nav bar-->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="nav-bar" aria-labelledby="offcanvasScrollingLabel">
+          
+
+          <div class="offcanvas-header px-3 py-3">
                 
                   <div class="container m-0" id="">
                     <div class="container">
@@ -34,7 +97,7 @@
               </div>
               <div class="offcanvas-body px-4 pt-0">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
-    
+  
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./index.html">
                       <button type="button" class="btn ">
@@ -43,7 +106,7 @@
                       </button>
                     </a>
                   </li>
-    
+  
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./news.html">
                       <button type="button" class="btn ">
@@ -52,7 +115,7 @@
                       </button>
                     </a>
                   </li>
-    
+  
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./events.html">
                       <button type="button" class="btn ">
@@ -61,7 +124,7 @@
                       </button>
                     </a>
                   </li>
-    
+  
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./Reminders.html">
                       <button type="button" class="btn ">
@@ -70,7 +133,7 @@
                       </button>
                     </a>
                   </li>
-    
+  
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./Tickets.html">
                       <button type="button" class="btn ">
@@ -79,7 +142,7 @@
                       </button>
                     </a>
                   </li>
-    
+  
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./products.html">
                       <button type="button" class="btn ">
@@ -88,7 +151,7 @@
                       </button>
                     </a>
                   </li>
-    
+  
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./services.html">
                       <button type="button" class="btn ">
@@ -98,9 +161,9 @@
                       </button>
                     </a>
                   </li>
-    
+  
                   
-    
+  
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./about_us.html">
                       <button type="button" class="btn ">
@@ -109,7 +172,7 @@
                       </button>
                     </a>
                   </li>
-    
+  
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="./setting.html">
                       <button type="button" class="btn ">
@@ -127,9 +190,9 @@
                       </button>
                     </a>
                   </li>
-    
+  
                 </ul>
-    
+  
                 <div class="container text-center">
                   <a href="./login_page.html">
                     <button type="button" class="btn btn-outline-danger px-xxl-5 position-relative">
@@ -138,15 +201,17 @@
                     </button>
                   </a>
                   
-    
+  
                 </div>
                 
                 
               </div>
-            </div>
-          </div>
-        </nav>
+
+        </div>
+      
       </div>
 
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
 </html>
