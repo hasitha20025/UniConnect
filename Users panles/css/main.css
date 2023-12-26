@@ -2,10 +2,10 @@
     background-color: #6528F7 !important;
 }
 
-.bg-body-secondary  {
-    
-}
 
+.text-bg-primary{
+    color: #6528F7 !important;
+}
 
 .btn-outline-primary {
 
@@ -14,13 +14,13 @@
 }
 
 .link-secondary {
-    color: #6528F7 !important;
+    background-color: #6528F7 !important;
 
 }
 
 .perple{
 
-    background-color: #6528F7 !important;
+    color: #6528F7 !important;
 
 }
 
