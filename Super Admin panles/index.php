@@ -10,6 +10,7 @@
 
     <!-------------------------------------------------------------------------------------------------------------------------------------------------->
 
+  
 
 
     <br />
@@ -23,6 +24,7 @@
             <div class="col-9 ">
                 <div class="row ">
                     <h5 class="px-4 ">Deshboard</h5>
+                    <?php echo Config::SITEURL; ?>
                     
                         <div class="col-3 ">                       
                             <div class="container  ">
@@ -49,7 +51,7 @@
                     
                     <div class="col-2 gx-5">
                         <div class="container">
-                            <a href="./admin-Events.html" class="nav-link">
+                            <a href="<?php echo Config::SITEURL; ?>./admin-Events.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
