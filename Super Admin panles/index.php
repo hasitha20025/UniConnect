@@ -24,11 +24,11 @@
             <div class="col-9 ">
                 <div class="row ">
                     <h5 class="px-4 ">Deshboard</h5>
-                    <?php echo Config::SITEURL; ?>
+                    <?php //echo Config::SITEURL; ?>
                     
                         <div class="col-3 ">                       
                             <div class="container  ">
-                                <a href="./admin-news.html" class="nav-link">
+                                <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin_news.php" class="nav-link">
                                 <div class="row border border-1 rounded  shadow bg-body rounded">
                                     <div class="col-auto py-3">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -412,7 +412,7 @@
                                 >
                                   <div class="carousel-inner">
                                     <div class="carousel-item active" data-bs-interval="2000">
-                                      <a href="<?php echo Config::SITEURL; ?>Super Admin panles/events.html">
+                                      <a href="##">
                                         <img
                                           src="./picuters/samples/b-1.png"
                                           class="d-block w-100"
@@ -423,7 +423,7 @@
                                       </a>
                                     </div>
                                     <div class="carousel-item active" data-bs-interval="2000">
-                                      <a href="./events.html">
+                                      <a href="##">
                                         <img
                                           src="./picuters/samples/b-2.png"
                                           class="d-block w-100"
@@ -434,7 +434,7 @@
                                       </a>
                                     </div>
                                     <div class="carousel-item active" data-bs-interval="2000">
-                                      <a href="./events.html">
+                                      <a href="##">
                                         <img
                                           src="./picuters/samples/b-3.png"
                                           class="d-block w-100"
