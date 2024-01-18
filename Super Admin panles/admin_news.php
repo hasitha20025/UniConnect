@@ -2,6 +2,9 @@
 <?php include('./parts/notification.php') ?>
 <?php include('./parts/navigation.php') ?>
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></script>
+
+
     <div class="container-fluid">
 
       <br />
@@ -35,103 +38,72 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">001</th>
-                <td>ID1001</td>
-                <td>
-                  <img
-                    src="./picuters/samples/n-1.png"
-                    alt=""
-                    width="100"
-                    height="100%"
-                  />
-                </td>
-                <td>News Title</td>
-                <td>2023/12/25</td>
-                <td>Descriptions</td>
-                <td>
-                    <div class="form-check form-switch">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        role="switch"
-                        id="flexSwitchCheckDefault"
-                      />
-                      <label
-                        class="form-check-label"
-                        for="flexSwitchCheckDefault"
-                      ></label>
-                    </div>
-                  </td>
-                <td>
-                  <div
-                    class="btn-group"
-                    role="group"
-                    aria-label="Basic outlined example"
-                  >
-                    <button type="button" class="btn btn-outline-warning">
-                      Edit
-                    </button>
-                    <button type="button" class="btn btn-outline-danger">
-                      Delete
-                    </button>
-                  </div>
-                </td>
-              </tr>
+              
+                <?php 
+                      // SQL query to retrieve data
+                      $sql = "SELECT * FROM tbl_news";
+                      $result = $conn->query($sql);
 
-              <tr>
-                <th scope="row">002</th>
-                <td>ID1002</td>
-                <td>
-                  <img
-                    src="./picuters/samples/n-2.png"
-                    alt=""
-                    width="100"
-                    height="100%"
-                  />
-                </td>
-                <td>News Title</td>
-                <td>2023/12/25</td>
-                <td>Descriptions</td>
-                <td>
-                    <div class="form-check form-switch">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        role="switch"
-                        id="flexSwitchCheckDefault"
-                      />
-                      <label
-                        class="form-check-label"
-                        for="flexSwitchCheckDefault"
-                      ></label>
-                    </div>
-                  </td>
-                <td>
-                  <div
-                    class="btn-group"
-                    role="group"
-                    aria-label="Basic outlined example"
-                  >
-                    <button type="button" class="btn btn-outline-warning">
-                      Edit
-                    </button>
-                    <button type="button" class="btn btn-outline-danger">
-                      Delete
-                    </button>
-                  </div>
-                </td>
-              </tr>
+                      if ($result->num_rows > 0) {
+                          while ($row = $result->fetch_assoc()) {
+                              $viewStatus = $row["view"];
+                              $visibilityClass = ($viewStatus == 'yes') ? 'visible-content' : 'hidden-content';
+                              
+                              echo '<tr class="' . $visibilityClass . '">';
+                              echo '<th scope="row">' . $row['id'] . '</th>';
+                              echo '<td>' . $row['id'] . '</td>';
+                              echo '<td><img src="' . Config::SITEURL . 'Super Admin panles/picuters/news/' . $row['image'] . '" alt="" width="100" height="100%"></td>';
+                              echo '<td>' . $row['title'] . '</td>';
+                              echo '<td>' . $row['date'] . '</td>';
+                              echo '<td>' . $row['description'] . '</td>';
+                              echo '<td class="visibility-text">' . (($viewStatus == 'yes') ? 'Still Show' : 'Not in Show') . '</td>';
+                              echo '<td>';
+                              echo '<div class="btn-group" role="group" aria-label="Basic outlined example">';
+                              echo '<button type="button" class="btn btn-outline-warning">Edit</button>';
+                              echo '<button type="button" class="btn btn-outline-danger">Delete</button>';
+                              echo '</div>';
+                              echo '</td>';
+                              echo '</tr>';
+                          }
+                      } else {
+                          echo "0 results";
+                      }
+                  ?>
+
+
             </tbody>
           </table>
         </div>
       </div>
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script src="/Super Admin panles/js/script.js"></script>
 
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"
-      ></script>
+      >
+
+          function toggleVisibility(checkbox, newsId) {
+              const isChecked = checkbox.checked;
+              const newValue = isChecked ? 'yes' : 'no';
+
+              // Send data to the server using AJAX
+              $.ajax({
+                  type: 'POST',
+                  url: '/Super Admin panles/update_visibility.php',
+                  data: { id: newsId, view: newValue },
+                  success: function (response) {
+                      // Optionally handle the response from the server
+                      console.log(response);
+                  },
+                  error: function (error) {
+                      console.error('Error updating visibility:', error);
+                  }
+              });
+          }
+
+    </script>
     </div>
   </body>
 </html>
