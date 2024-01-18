@@ -51,7 +51,7 @@
                     
                     <div class="col-2 gx-5">
                         <div class="container">
-                            <a href="<?php echo Config::SITEURL; ?>./admin-Events.html" class="nav-link">
+                            <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-Events.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-auto gx-5">
                         <div class="container">
-                        <a href="./admin-reminders.html" class="nav-link">
+                        <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-reminders.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -90,7 +90,7 @@
                     </div>
                     <div class="col-auto gx-5">
                         <div class="container">
-                          <a href="./admin-feedbacks.html" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-feedbacks.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -111,7 +111,7 @@
                     </div>
                     <div class="col-auto gx-5">
                         <div class="container">
-                          <a href="./admin-notifications.html" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-notifications.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -134,7 +134,7 @@
                     <h5 class="px-4 mt-3">Sell Items</h5>
                     <div class="col-4">
                         <div class="container">
-                        <a href="./admin-tickets.html" class="nav-link">
+                        <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-tickets.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -153,7 +153,7 @@
                     </div>
                     <div class="col-4">
                         <div class="container">
-                            <a href="./admin-products.html" class="nav-link">
+                            <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-products.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -172,7 +172,7 @@
                     </div>
                     <div class="col-4">
                         <div class="container">
-                          <a href="./admin-services.html" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-services.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -197,7 +197,7 @@
                     <h5 class="px-4 mt-3">Orders</h5>
                     <div class="col-4">
                         <div class="container">
-                          <a href="./admin-tickets-orders.html" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-tickets-orders.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -216,7 +216,7 @@
                     </div>
                     <div class="col-4">
                         <div class="container">
-                           <a href="./admin-product-orders.html" class="nav-link">
+                           <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-product-orders.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -235,7 +235,7 @@
                     </div>
                     <div class="col-4">
                         <div class="container">
-                           <a href="./admin-services-orders.html" class="nav-link">
+                           <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-services-orders.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -261,7 +261,7 @@
                     <div class="col-4">
 
                         <div class="container">
-                          <a href="./admin-users.html" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-users.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -280,7 +280,7 @@
                     </div>
                     <div class="col-4">
                         <div class="container">
-                          <a href="./admin-admins.html" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-admins.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -301,7 +301,7 @@
                     </div>
                     <div class="col-4">
                         <div class="container">
-                          <a href="./admin-admins.html #Faculty Admins" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-admins.html #Faculty Admins" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded my-0">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -320,7 +320,7 @@
                     </div>
                     <div class="col-4">
                         <div class="container">
-                          <a href="./admin-admins.html #Club President" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-admins.html #Club President" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded my-2">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -341,7 +341,7 @@
                     </div>
                     <div class="col-4">
                         <div class="container">
-                          <a href="./admin-admins.html #Services Owners" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-admins.html #Services Owners" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded my-2">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -362,7 +362,7 @@
                     </div>
                     <div class="col-4">
                         <div class="container">
-                          <a href="./admin-admins.html #Products Sellers" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-admins.html #Products Sellers" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded my-2">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -412,7 +412,7 @@
                                 >
                                   <div class="carousel-inner">
                                     <div class="carousel-item active" data-bs-interval="2000">
-                                      <a href="./events.html">
+                                      <a href="<?php echo Config::SITEURL; ?>Super Admin panles/events.html">
                                         <img
                                           src="./picuters/samples/b-1.png"
                                           class="d-block w-100"
