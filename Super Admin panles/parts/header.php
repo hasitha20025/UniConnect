@@ -22,7 +22,7 @@
             <nav class="navbar fixed-top " style=>
                 <div class="container-fluid bg-body-tertiary shadow p-2 mb-1 bg-body-tertiary rounded">
 
-                    <a class="navbar-brand" href="./admin-index.html">
+                    <a class="navbar-brand" href="<?php echo Config::SITEURL?>/Super Admin panles/index.php">
                         <span><img src="./picuters/logo/2-b.png" width="60" height="60"></span>
                         <span class="px-1">UniConnect </span>
                         <span class="px-1"> </span>

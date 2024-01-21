@@ -44,7 +44,7 @@
 
 
                         <li>
-                            <a href="./admin-index.html" class="nav-link  them-color ">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/index.php" class="nav-link  them-color ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-speedometer2" viewBox="0 0 16 16">
                                     <path
