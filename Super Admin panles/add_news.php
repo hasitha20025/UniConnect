@@ -13,8 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Image upload handling
     if (isset($_FILES['news_img']['name'])) {
         $image_name = $_FILES['news_img']['name'];
-        $ext = pathinfo($image_name, PATHINFO_EXTENSION);
-        $image_name = "news_" . rand(0000, 9999) . '.' . $ext;
+        $ext =end(explode('.',$image_name));
+        $image_name= "add_news" .rand(0000,9999).'.'.$ext;
+       
 
         $source_path = $_FILES['news_img']['tmp_name'];
         $destination_path  = "/xampp/htdocs/UniConnect/images/news/" . $image_name;

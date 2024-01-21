@@ -505,9 +505,8 @@
 
 
 
-        <img src="'<?php echo Config::SITEURL; ?>Super Admin panles/picuters/news.$row['image'].'" alt="" width="100" height="100%"></td>';
+        
 </body>
 
 </html>
 
-E:\xampp\htdocs\UniConnect\Super Admin panles\picuters\news
