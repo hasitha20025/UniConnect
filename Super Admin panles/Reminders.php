@@ -18,7 +18,7 @@ include('./parts/navigation.php');
         <h5 class="px-1 mt-4 py-3">Reminders Dashboard</h5>
 
         <div class="text-end">
-            <a href="<?php echo Config::SITEURL; ?>Super Admin panles/add_events.php">
+            <a href="<?php echo Config::SITEURL; ?>Super Admin panles/add_reminders.php">
                 <button type="button" class="btn btn-primary px-3">
                     Add Event Reminders
                 </button>
@@ -53,11 +53,11 @@ include('./parts/navigation.php');
 
                             echo '<th scope="row">' . $counter . '</th>';
                             echo '<td>' . $row['id'] . '</td>';
-                            echo '<td><img src="' . Config::SITEURL . 'images/Event/' . $row['image'] . '" alt="" width="100" height="100%"></td>';
+                            echo '<td><img src="' . Config::SITEURL . 'images/Reminder/' . $row['image'] . '" alt="" width="100" height="100%"></td>';
 
-                            echo '<td>' . $row['titile'] . '</td>';
+                            echo '<td>' . $row['title'] . '</td>';
                             echo '<td>' . $row['date'] . '</td>';
-                            echo '<td>' . $row['description'] . '</td>';
+                            echo '<td>' . $row['discription'] . '</td>';
                             echo '<td class="visibility-text">' . (($viewStatus == 'yes') ? 'Still Show' : 'Not in Show') . '</td>';
                             echo '<td>';
                             echo '<div class="btn-group" role="group" aria-label="Basic outlined example">';
@@ -88,7 +88,7 @@ include('./parts/navigation.php');
             if (confirm('Are you sure you want to delete this record?')) {
                 $.ajax({
                     type: 'POST',
-                    url: '<?php echo Config::SITEURL?>/Super Admin panles/parts/delete_Event.php', // Adjust the path accordingly
+                    url: '<?php echo Config::SITEURL?>/Super Admin panles/parts/delete_Reminder.php', // Adjust the path accordingly
                     data: { id: newsId },
                     success: function (response) {
                         console.log(response);
@@ -103,7 +103,7 @@ include('./parts/navigation.php');
 
         function editRecord(newsId) {
             // Redirect to the edit_news.php page with the newsId as a parameter
-            window.location.href = '<?php echo Config::SITEURL?>/Super Admin panles/edit_events.php?id=' + newsId;
+            window.location.href = '<?php echo Config::SITEURL?>/Super Admin panles/edit_reminders.php?id=' + newsId;
         }
 
 

@@ -1,6 +1,5 @@
 <?php
 // Include your database connection
-
 include('/xampp/htdocs/UniConnect/config/constants.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -11,30 +10,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $view = isset($_POST['view']) ? 'yes' : 'no';
 
     // Image upload handling
-    if (isset($_FILES['event_img']['name'])) {
-        $image_name = $_FILES['event_img']['name'];
-        $ext =end(explode('.',$image_name));
-        $image_name= "add_event" .rand(0000,9999).'.'.$ext;
-       
+    if (isset($_FILES['Remainder_img']['name'])) {
+        $image_name = $_FILES['Remainder_img']['name'];
+        $ext = end(explode('.', $image_name));
+        $image_name = "add_reminders" . rand(0000, 9999) . '.' . $ext;
 
-        $source_path = $_FILES['event_img']['tmp_name'];
-        $destination_path  = "/xampp/htdocs/UniConnect/images/Event/" . $image_name;
+        $source_path = $_FILES['Remainder_img']['tmp_name'];
+        $destination_path  = "/xampp/htdocs/UniConnect/images/Reminder/" . $image_name;
 
         $upload = move_uploaded_file($source_path, $destination_path);
-
     } else {
         $image_name = ""; // If no image is uploaded
     }
 
     // Insert the news details into the database using prepared statements
-    $insertQuery = "INSERT INTO tbl_event (image, titile, date, description, view) VALUES (?, ?, ?, ?, ?)";
+    $insertQuery = "INSERT INTO tbl_reminder (image, title, date, discription, view, LastupdateAt) VALUES (?, ?, ?, ?, ?, ?)";
+
+    $lastUpdateAt = date('Y-m-d H:i:s'); // Current timestamp for LastupdateAt
 
     $stmt = $conn->prepare($insertQuery);
-    $stmt->bind_param("sssss", $image_name, $title, $date, $description, $view);
+    $stmt->bind_param("ssssss", $image_name, $title, $date, $description, $view, $lastUpdateAt);
 
     if ($stmt->execute()) {
         // Redirect to the news dashboard or display a success message
-        header("Location: Events.php?success=1");
+        header("Location: Reminders.php?success=1");
         exit();
     } else {
         echo "Error inserting record: " . $stmt->error;
@@ -46,12 +45,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UniConnect Edit Events Details</title>
+    <title>UniConnect Edit Remainder Details</title>
     <link rel="shortcut icon" href="./picuters/logo/2-b.png" type="image/x-icon" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
@@ -64,12 +64,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="modal-dialog" role="document">
                 <div class="modal-content rounded-4 shadow">
                     <div class="modal-header p-5 pb-4 border-bottom-0">
-                        <h2 class="fw-bold mb-4 fs-2">Add Events Details</h2>
+                        <h2 class="fw-bold mb-4 fs-2">Add Remainder Details</h2>
                     </div>
 
                     <div class="modal-body p-5 pt-0">
 
-                        <form action="add_events.php" method="post" enctype="multipart/form-data">
+                        <form action="add_reminders.php" method="post" enctype="multipart/form-data">
 
                         <div class="col-sm-12">
                             <label for="view">Availability</label>
@@ -82,15 +82,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
                             <div class="col-sm-12">
-                                <label for="thumbnail">Events Thumbnail</label>
-                                <input type="file" class="form-control" name="event_img" id="thumbnail" required />
+                                <label for="thumbnail">Remainder Thumbnail</label>
+                                <input type="file" class="form-control" name="Remainder_img" id="thumbnail" required />
 
                             </div>
 
                             <div class="col-sm-12">
                                 <div class="mb-3">
-                                    <label for="title" class="form-label">Events Title</label>
-                                    <input type="text" class="form-control" id="title" name="title" placeholder="News Title" required />
+                                    <label for="title" class="form-label">Remainder Title</label>
+                                    <input type="text" class="form-control" id="title" name="title" placeholder="Remainder Title" required />
                                 </div>
                             </div>
 
@@ -101,12 +101,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             <div class="col-sm-12">
                                 <div class="mb-3">
-                                    <label for="description" class="form-label">Events Descriptions</label>
+                                    <label for="description" class="form-label">Remainder Descriptions</label>
                                     <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
                                 </div>
                             </div>
 
-                            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary mt-3" type="submit">Add Events</button>
+                            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary mt-3" type="submit">Add Remainder</button>
                         </form>
                     </div>
                 </div>
