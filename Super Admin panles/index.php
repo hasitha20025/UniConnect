@@ -51,7 +51,7 @@
                     
                     <div class="col-2 gx-5">
                         <div class="container">
-                            <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-Events.html" class="nav-link">
+                            <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Events.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-auto gx-5">
                         <div class="container">
-                        <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-reminders.html" class="nav-link">
+                        <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Reminders.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"

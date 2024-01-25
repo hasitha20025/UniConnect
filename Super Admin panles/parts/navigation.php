@@ -57,7 +57,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-news.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/admin_news.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-stickies-fill" viewBox="0 0 16 16">
                                     <path
@@ -69,7 +69,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-Events.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/Events.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
                                     <path
