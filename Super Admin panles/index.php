@@ -134,7 +134,7 @@
                     <h5 class="px-4 mt-3">Sell Items</h5>
                     <div class="col-4">
                         <div class="container">
-                        <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-tickets.html" class="nav-link">
+                        <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Ticket/tickets.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
