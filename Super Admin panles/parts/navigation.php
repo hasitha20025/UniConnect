@@ -1,6 +1,25 @@
 <?php 
-$user_id = $_SESSION['user_id'];
- //echo '////////////////////////////////////////////////////The user ID is ' . $user_id; 
+
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+    $sql = "SELECT * from super_admin WHERE id = $user_id";
+    $res = mysqli_query($conn, $sql);
+
+    if ($res == TRUE) {
+        $count = mysqli_num_rows($res);
+        if ($count > 0) {
+            while ($rows = mysqli_fetch_assoc($res)) {
+                
+                $image = $rows["image"];
+                $F_name = $rows["F_name"];
+                $L_name = $rows["L_name"];
+                $email = $rows["email"];
+                $phone = $rows["phone"];
+                $password = $rows["password"];
+            }
+        }
+    }
+}
 
 ?>
             <!--nav bar-->
@@ -14,14 +33,14 @@ $user_id = $_SESSION['user_id'];
                             <div class="col-auto py-1">
                                 <a href="./admin-profile.html"
                                     class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                                    <img src="./picuters/profile-pic/p-1.jpg" class="rounded-circle" alt="" width="60"
+                                    <img src="<?php echo Config::SITEURL?>/images/admins/super_admin/<?php echo $image; ?>" class="rounded-circle" alt="" width="60"
                                         height="60">
                                 </a>
                             </div>
                             <div class="col-auto py-1">
                                 <div class="row">
                                     <span class="fs-4 px-2">
-                                        <h5>Hasitha Dhananjaya </h5>
+                                        <h5><?php echo $F_name.' '.$L_name ?> </h5>
                                     </span>
                                 </div>
                                 <div class="row ">

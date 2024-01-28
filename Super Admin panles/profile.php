@@ -35,7 +35,7 @@ if (isset($_GET['user_id'])) {
         <div class="row g-4">
           <div class="col-sm-12">
             <div class="imgcontainer text-center pb-1">
-              <img src="./picuters/profile-pic/p-1.jpg" width="100" height="100" alt="Avatar"
+              <img src="<?php echo Config::SITEURL?>/images/admins/super_admin/<?php echo $image; ?>" width="100" height="100" alt="Avatar"
                 class="avatar rounded-circle" id="profile-pic" />
             </div>
           </div>
