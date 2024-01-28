@@ -1,3 +1,29 @@
+<?php 
+include('/xampp/htdocs/UniConnect/config/constants.php');
+?>
+
+<?php
+if (isset($_GET['user_id'])) {
+    $Id = $_GET['user_id'];
+    $sql = "SELECT * from super_admin WHERE id = $Id";
+    $res = mysqli_query($conn, $sql);
+
+    if ($res == TRUE) {
+        $count = mysqli_num_rows($res);
+        if ($count > 0) {
+            while ($rows = mysqli_fetch_assoc($res)) {
+                
+                $image = $rows["image"];
+                $F_name = $rows["F_name"];
+                $L_name = $rows["L_name"];
+                $email = $rows["email"];
+                $phone = $rows["phone"];
+                $password = $rows["password"];
+            }
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

@@ -1,4 +1,8 @@
+<?php 
+$user_id = $_SESSION['user_id'];
+ //echo '////////////////////////////////////////////////////The user ID is ' . $user_id; 
 
+?>
             <!--nav bar-->
             <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
                 id="nav-bar" aria-labelledby="offcanvasScrollingLabel">
@@ -145,7 +149,7 @@
 
 
                         <li>
-                            <a href="./admin-notifications.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/notifications.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-bell-fill" viewBox="0 0 16 16">
                                     <path
@@ -190,15 +194,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-profile.html" class="nav-link link-body-emphasis ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-person-circle" viewBox="0 0 16 16">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                                    <path fill-rule="evenodd"
-                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                                </svg>
-                                Profile
-                            </a>
+                        <a href="<?php echo Config::SITEURL; ?>/Super Admin panles/profile.php?user_id=<?php echo $_SESSION['user_id']; ?>" class="nav-link link-body-emphasis">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+    </svg>
+    Profile
+</a>
                         </li>
 
 

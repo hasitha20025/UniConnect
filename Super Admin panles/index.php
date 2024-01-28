@@ -1,9 +1,19 @@
 <?php include('./parts/header.php') ?>
+<?php
+
+if (!isset($_SESSION['user_id'])) {
+            header("Location: " . Config::SITEURL . "Super Admin panles/index.php");
+            exit();
+        }
+
+        $user_id = $_SESSION['user_id'];
+
+?>
+
+
+
 <?php include('./parts/notification.php') ?>
 <?php include('./parts/navigation.php') ?>
-
-
-
 
 
 

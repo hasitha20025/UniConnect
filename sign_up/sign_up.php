@@ -1,3 +1,7 @@
+<?php 
+include('/xampp/htdocs/UniConnect/config/constants.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +10,7 @@
     <title>UniConnect Sign up</title>
     <link
       rel="shortcut icon"
-      href="./picuters/logo/2-b.png"
+      href="../Super Admin panles/parts/logo/2-b.png"
       type="image/x-icon"
     />
 
@@ -17,7 +21,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="../Super Admin panles/css/main.css" />
   </head>
 
   <body>

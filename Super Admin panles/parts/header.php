@@ -1,4 +1,5 @@
-<?php include('/xampp/htdocs/UniConnect/config/constants.php'); ?>
+<?php include('/xampp/htdocs/UniConnect/config/constants.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
