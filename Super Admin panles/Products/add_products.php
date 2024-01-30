@@ -41,7 +41,7 @@ include('/xampp/htdocs/UniConnect/config/constants.php');
             <div class="modal-body p-5 pt-0">
 
 
-            <form method="POST" action="handle_product_submission.php" enctype="multipart/form-data">
+            <form method="POST" action="add_products.php" enctype="multipart/form-data">
             <div class="row gx-4 gy-3">
                 <div class="col-sm-12">
                     <label for="productSellerID" class="form-label">Select Seller</label>
@@ -87,6 +87,10 @@ include('/xampp/htdocs/UniConnect/config/constants.php');
             <input type="number" class="form-control" name="productPrice" id="productPrice" placeholder="99.99" required />
         </div>
         <div class="col-sm-12">
+            <label for="productAvailability" class="form-label">Products Availability</label>
+            <input type="number" class="form-control" id="productAvailability" name="productAvailability" placeholder="Product Availability" />
+        </div>
+        <div class="col-sm-12">
             <label for="productDescription" class="form-label">Products Description</label>
             <textarea class="form-control" id="productDescription" name="productDescription" rows="3" required></textarea>
         </div>
@@ -108,3 +112,56 @@ include('/xampp/htdocs/UniConnect/config/constants.php');
     crossorigin="anonymous"
   ></script>
 </html>
+
+<?php
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["productSellerID"])) {
+    // Product data
+    $productSellerID = $_POST['productSellerID'];
+    $productTitle = $_POST['productTitle'];
+    $productCategory = $_POST['productCategory'];
+    $productAvailability = $_POST['productAvailability'];
+    $productDate = $_POST['productDate'];
+    $productPrice = $_POST['productPrice'];
+    $productDescription = $_POST['productDescription'];
+
+      // Image upload handling
+    if (isset($_FILES['productPicture']['name'])) {
+      $image_name = $_FILES['productPicture']['name'];
+
+      // Explode the string into an array
+      $image_name_parts = explode('.', $image_name);
+
+      // Get the last element of the array
+      $ext = end($image_name_parts);
+
+      $image_name = "product_" . rand(0000, 9999) . '.' . $ext;
+
+      $source_path = $_FILES['productPicture']['tmp_name'];
+      $destination_path = "/xampp/htdocs/UniConnect/images/products/" . $image_name;
+
+      $upload = move_uploaded_file($source_path, $destination_path);
+    } else {
+      $image_name = ""; // If no image is uploaded
+    }
+
+    // SQL query to insert a new product
+    $sql = "INSERT INTO tbl_products (product_name, img, title, date, category, price, descripition, availability, PO_ID)
+            VALUES ('$productTitle', '$image_name', '$productTitle', '$productDate', '$productCategory', '$productPrice', '$productDescription','$productAvailability', '$productSellerID')";
+
+    $res = mysqli_query($conn, $sql);
+
+    if ($res == TRUE) {
+      // Redirect to products.php on success
+      header("Location: products.php");
+      exit(); // Ensure that no code is executed after the header() function
+  
+      // Note: Avoid any output (echo, print, HTML content) before the header() function
+  } else {
+      echo "Failed to add product";
+      // Handle error (you may redirect or display an error message)
+  }
+}
+?>
+

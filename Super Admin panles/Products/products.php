@@ -38,97 +38,52 @@ if (!isset($_SESSION['user_id'])) {
         </div>
 
         <div class="container-fluid">
-          <table class="table table-hover table-sm caption-top table-responsive">
-            <thead>
-              <tr>
-                <th scope="col">#No</th>
-                <th scope="col">ID</th>
-                <th scope="col">Products Picture</th>
-                <th scope="col">Products Title</th>
-                <th scope="col">Product Category</th>
-                <th scope="col">Date</th>
-                <th scope="col">Products Descriptions</th>
-                <th scope="col">Prise ($)</th>
-                <th scope="col">View(Show or Hidden)</th>
-                <th scope="col">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">001</th>
-                <td>ID1001</td>
-                <td>
-                  <img
-                    src="./picuters/samples/p-1.png"
-                    alt=""
-                    width="100"
-                    height="100%"
-                  />
-                </td>
-                <td>Title</td>
-                <td>product category</td>
-                <td>2023/12/25</td>
-                <td>Descriptions</td>
-                <td>99.99</td>
-                <td>
-                    <div class="form-check form-switch">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        role="switch"
-                        id="flexSwitchCheckDefault"
-                      />
-                      <label
-                        class="form-check-label"
-                        for="flexSwitchCheckDefault"
-                      ></label>
-                    </div>
-                </td>
-                <td>
-                  <div
-                    class="btn-group"
-                    role="group"
-                    aria-label="Basic outlined example"
-                  >
-                    <button type="button" class="btn btn-outline-warning">
-                      Edit
-                    </button>
-                    <button type="button" class="btn btn-outline-danger">
-                      Delete
-                    </button>
-                  </div>
-                </td>
-              </tr>
 
+
+  <table class="table table-hover table-sm caption-top table-responsive">
+        <thead>
+          <tr>
+            <th scope="col">#No</th>
+            <th scope="col">ID</th>
+            <th scope="col">Products Picture</th>
+            <th scope="col">Products Title</th>
+            <th scope="col">Product Category</th>
+            <th scope="col">Date</th>
+            <th scope="col">Products Descriptions</th>
+            <th scope="col">Prise ($)</th>
+            <th scope="col">Availability</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <?php
+          // Fetch products from the database
+          $sql = "SELECT * FROM tbl_products";
+          $result = mysqli_query($conn, $sql);
+          // Check if any rows were returned
+          if (mysqli_num_rows($result) > 0) {
+            $counter = 1;
+            while ($row = mysqli_fetch_assoc($result)) {
+          ?>
               <tr>
-                <th scope="row">001</th>
-                <td>ID1001</td>
+              <th scope="row"><?php echo $counter++; ?></th>
+                <td><?php echo $row['id']; ?></td>
                 <td>
                   <img
-                    src="./picuters/samples/p-2.png"
+                    src="./picuters/samples/<?php echo $row['img']; ?>"
                     alt=""
                     width="100"
                     height="100%"
                   />
                 </td>
-                <td>Title</td>
-                <td>product category</td>
-                <td>2023/12/25</td>
-                <td>Descriptions</td>
-                <td>99.99</td>
+                <td><?php echo $row['title']; ?></td>
+                <td><?php echo $row['category']; ?></td>
+                <td><?php echo $row['date']; ?></td>
+                <td><?php echo $row['descripition']; ?></td>
+                <td><?php echo $row['price']; ?></td>
                 <td>
-                    <div class="form-check form-switch">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        role="switch"
-                        id="flexSwitchCheckDefault"
-                      />
-                      <label
-                        class="form-check-label"
-                        for="flexSwitchCheckDefault"
-                      ></label>
-                    </div>
+                <?php echo $row['availability']; ?>
                 </td>
                 <td>
                   <div
@@ -145,8 +100,15 @@ if (!isset($_SESSION['user_id'])) {
                   </div>
                 </td>
               </tr>
-            </tbody>
-          </table>
+          <?php
+            }
+          } else {
+            // No products found
+            echo '<tr><td colspan="10">No products available</td></tr>';
+          }
+          ?>
+        </tbody>
+      </table>
         </div>
       </div>
     </div>
