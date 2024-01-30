@@ -155,12 +155,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["productSellerID"])) {
     if ($res == TRUE) {
       // Redirect to products.php on success
       header("Location: products.php");
-      exit(); // Ensure that no code is executed after the header() function
+      exit(); 
   
-      // Note: Avoid any output (echo, print, HTML content) before the header() function
+      
   } else {
       echo "Failed to add product";
-      // Handle error (you may redirect or display an error message)
+     
   }
 }
 ?>

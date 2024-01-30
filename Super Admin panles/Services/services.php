@@ -1,5 +1,7 @@
+<?php include('../parts/header.php');
 
-<?php include('../parts/header.php')?>
+?>
+
 <?php
 
 if (!isset($_SESSION['user_id'])) {
@@ -16,7 +18,7 @@ if (!isset($_SESSION['user_id'])) {
 <?php include('../parts/notification.php') ?>
 <?php include('../parts/navigation.php') ?>
 
-
+    
     <div class="container-fluid">
       <br />
       <br />
@@ -24,37 +26,37 @@ if (!isset($_SESSION['user_id'])) {
       <br />
 
       <div class="container-fluid">
-        <h5 class="px-1 mt-4 py-3">Tickets Dashboard</h5>
+        <h5 class="px-1 mt-4 py-3">Services Dashboard</h5>
 
         <div class="text-end py-2">
-          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Ticket/add_tickets.php">
+          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Services/add_Services.php">
             <button type="button" class="btn btn-primary px-3 py-2">
-              + Add Tickets
+              + Add Services
             </button>
           </a>
         </div>
 
         <div class="container-fluid">
-
-
           <table class="table table-hover table-sm caption-top table-responsive">
             <thead>
               <tr>
                 <th scope="col">#No</th>
                 <th scope="col">ID</th>
-                <th scope="col">Ticket Picture</th>
-                <th scope="col">Ticket Title</th>
+                <th scope="col">Services Picture</th>
+                <th scope="col">Services Title</th>
+                <th scope="col">Services Category</th>
                 <th scope="col">Date</th>
-                <th scope="col">Ticket Descriptions</th>
+                <th scope="col">Services Descriptions</th>
                 <th scope="col">Prise ($)</th>
                 <th scope="col">Availability</th>
                 <th scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>
-            <?php
+
+          <?php
           // Fetch products from the database
-          $sql = "SELECT * FROM tbl_ticket";
+          $sql = "SELECT * FROM tbl_service";
           $result = mysqli_query($conn, $sql);
           // Check if any rows were returned
           if (mysqli_num_rows($result) > 0) {
@@ -66,22 +68,26 @@ if (!isset($_SESSION['user_id'])) {
                 <td><?php echo $row['id']; ?></td>
                 <td>
                   <img
-                    src="./picuters/samples/<?php echo $row['img']; ?>"
+                    src="./picuters/samples/<?php echo $row['image']; ?>"
                     alt=""
                     width="100"
                     height="100%"
                   />
                 </td>
-                <td><?php echo $row['title']; ?></td>
+                <td><?php echo $row['titile']; ?></td>
+                <td><?php echo $row['category']; ?></td>
                 <td><?php echo $row['date']; ?></td>
                 <td><?php echo $row['description']; ?></td>
                 <td><?php echo $row['price']; ?></td>
-                <td><?php echo $row['availability']; ?></td>
-                
                 <td>
+                <?php echo $row['availability']; ?>
+                </td>
+                <td>
+                
                   <button type="button" class="btn btn-outline-warning" onclick="editRecord(<?php echo $row['id']; ?>)">Edit</button>
                   <button type="button" class="btn btn-outline-danger" onclick="deleteRecord(<?php echo $row['id']; ?>)">Delete</button>
                 </td>
+                
               </tr>
           <?php
             }
@@ -90,43 +96,11 @@ if (!isset($_SESSION['user_id'])) {
             echo '<tr><td colspan="10">No products available</td></tr>';
           }
           ?>
-
-              
-
-            </tbody>
+        </tbody>
           </table>
-
-
-
         </div>
       </div>
     </div>
-    <script>
-        function deleteRecord(newsId) {
-            if (confirm('Are you sure you want to delete this record?')) {
-                $.ajax({
-                    type: 'POST',
-                    url: '<?php echo Config::SITEURL?>/Super Admin panles/parts/delete_notifications.php', // Adjust the path accordingly
-                    data: { id: newsId },
-                    success: function (response) {
-                        console.log(response);
-                        location.reload();
-                    },
-                    error: function (error) {
-                        console.error('Error deleting record:', error);
-                    }
-                });
-            }
-        }
-
-        function editRecord(newsId) {
-            // Redirect to the edit_news.php page with the newsId as a parameter
-            window.location.href = '<?php echo Config::SITEURL?>/Super Admin panles/edit_Notification.php?id=' + newsId;
-        }
-
-
-
-    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

@@ -182,7 +182,7 @@ if (!isset($_SESSION['user_id'])) {
                     </div>
                     <div class="col-4">
                         <div class="container">
-                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-services.html" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Services/services.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"

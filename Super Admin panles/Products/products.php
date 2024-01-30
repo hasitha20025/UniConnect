@@ -86,19 +86,11 @@ if (!isset($_SESSION['user_id'])) {
                 <?php echo $row['availability']; ?>
                 </td>
                 <td>
-                  <div
-                    class="btn-group"
-                    role="group"
-                    aria-label="Basic outlined example"
-                  >
-                    <button type="button" class="btn btn-outline-warning">
-                      Edit
-                    </button>
-                    <button type="button" class="btn btn-outline-danger">
-                      Delete
-                    </button>
-                  </div>
+                
+                  <button type="button" class="btn btn-outline-warning" onclick="editRecord(<?php echo $row['id']; ?>)">Edit</button>
+                  <button type="button" class="btn btn-outline-danger" onclick="deleteRecord(<?php echo $row['id']; ?>)">Delete</button>
                 </td>
+                
               </tr>
           <?php
             }
@@ -112,6 +104,32 @@ if (!isset($_SESSION['user_id'])) {
         </div>
       </div>
     </div>
+    <script>
+        function deleteRecord(newsId) {
+            if (confirm('Are you sure you want to delete this record?')) {
+                $.ajax({
+                    type: 'POST',
+                    url: '<?php echo Config::SITEURL?>/Super Admin panles/parts/delete_notifications.php', // Adjust the path accordingly
+                    data: { id: newsId },
+                    success: function (response) {
+                        console.log(response);
+                        location.reload();
+                    },
+                    error: function (error) {
+                        console.error('Error deleting record:', error);
+                    }
+                });
+            }
+        }
+
+        function editRecord(newsId) {
+            // Redirect to the edit_news.php page with the newsId as a parameter
+            window.location.href = '<?php echo Config::SITEURL?>/Super Admin panles/edit_Notification.php?id=' + newsId;
+        }
+
+
+
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
