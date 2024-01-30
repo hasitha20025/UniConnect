@@ -163,7 +163,7 @@ if (!isset($_SESSION['user_id'])) {
                     </div>
                     <div class="col-4">
                         <div class="container">
-                            <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-products.html" class="nav-link">
+                            <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Products/products.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -309,88 +309,9 @@ if (!isset($_SESSION['user_id'])) {
                           </a>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="container">
-                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-admins.html #Faculty Admins" class="nav-link">
-                            <div class="row border border-1 rounded shadow bg-body rounded my-0">
-                                <div class="col-auto py-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                        class="bi bi-person-fill-gear" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4m9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
-                                    </svg>
-                                </div>
-                                <div class="col-auto">
-                                    <p>Faculty Admins</p>
-                                    <p>20</p>
-                                </div>
-                            </div>
-                          </a>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="container">
-                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-admins.html #Club President" class="nav-link">
-                            <div class="row border border-1 rounded shadow bg-body rounded my-2">
-                                <div class="col-auto py-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                        class="bi bi-person-video3" viewBox="0 0 16 16">
-                                        <path
-                                            d="M14 9.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-6 5.7c0 .8.8.8.8.8h6.4s.8 0 .8-.8-.8-3.2-4-3.2-4 2.4-4 3.2" />
-                                        <path
-                                            d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h5.243c.122-.326.295-.668.526-1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v7.81c.353.23.656.496.91.783.059-.187.09-.386.09-.593V4a2 2 0 0 0-2-2z" />
-                                    </svg>
-                                </div>
-                                <div class="col-auto">
-                                    <p>Club President</p>
-                                    <p>5</p>
-                                </div>
-                            </div>
-                          </a>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="container">
-                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-admins.html #Services Owners" class="nav-link">
-                            <div class="row border border-1 rounded shadow bg-body rounded my-2">
-                                <div class="col-auto py-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                        class="bi bi-person-fill-check" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                                        <path
-                                            d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4" />
-                                    </svg>
-                                </div>
-                                <div class="col-auto">
-                                    <p>Services Owners</p>
-                                    <p>5</p>
-                                </div>
-                            </div>
-                         </a>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="container">
-                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-admins.html #Products Sellers" class="nav-link">
-                            <div class="row border border-1 rounded shadow bg-body rounded my-2">
-                                <div class="col-auto py-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                        class="bi bi-person-fill-check" viewBox="0 0 16 16">
-                                        <path
-                                            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                                        <path
-                                            d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4" />
-                                    </svg>
-                                </div>
-                                <div class="col-auto">
-                                    <p>Products Sellers</p>
-                                    <p>5</p>
-                                </div>
-                            </div>
-                        </a>  
-                        </div>
-                    </div>
+                   
+
+                   
                 </div>
 
 
