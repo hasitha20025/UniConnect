@@ -97,7 +97,7 @@ if ($result->num_rows == 1) {
 
 
         } else if ($row['role_id'] == 2) { // Role ID 2 represents student
-            header("Location: /APMS-newV2.00/student/index.php?user_id=" . $_SESSION['user_id']);
+            header("Location: " . Config::SITEURL . "Super Admin panles/index.php?user_id=" . $_SESSION['user_id']);
         } else if ($row['role_id'] == 3) { // Role ID 3 represents lecture
             header("Location:/APMS-newV2.00/Lectures_panel/index.php?user_id=" . $_SESSION['user_id']);
         }

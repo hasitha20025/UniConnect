@@ -207,7 +207,7 @@ if (!isset($_SESSION['user_id'])) {
                     <h5 class="px-4 mt-3">Orders</h5>
                     <div class="col-6">
                         <div class="container">
-                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Orders/tickets_orders.php" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Orders/selection_ticktes.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -226,7 +226,7 @@ if (!isset($_SESSION['user_id'])) {
                     </div>
                     <div class="col-6">
                         <div class="container">
-                           <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Orders/admin-product-orders.html" class="nav-link">
+                           <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Orders/Selection_products.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
