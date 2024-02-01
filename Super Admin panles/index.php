@@ -36,7 +36,7 @@ if (!isset($_SESSION['user_id'])) {
                     <h5 class="px-4 ">Deshboard</h5>
                     <?php //echo Config::SITEURL; ?>
                     
-                        <div class="col-3 ">                       
+                        <div class="col-2 ">                       
                             <div class="container  ">
                                 <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin_news.php" class="nav-link">
                                 <div class="row border border-1 rounded  shadow bg-body rounded">
@@ -205,9 +205,9 @@ if (!isset($_SESSION['user_id'])) {
 
                 <div class="row">
                     <h5 class="px-4 mt-3">Orders</h5>
-                    <div class="col-4">
+                    <div class="col-6">
                         <div class="container">
-                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-tickets-orders.html" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Orders/tickets_orders.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -224,9 +224,9 @@ if (!isset($_SESSION['user_id'])) {
                           </a>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6">
                         <div class="container">
-                           <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-product-orders.html" class="nav-link">
+                           <a href="<?php echo Config::SITEURL; ?>Super Admin panles/Orders/admin-product-orders.html" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto py-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -243,32 +243,12 @@ if (!isset($_SESSION['user_id'])) {
                           </a>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="container">
-                           <a href="<?php echo Config::SITEURL; ?>Super Admin panles/admin-services-orders.html" class="nav-link">
-                            <div class="row border border-1 rounded shadow bg-body rounded">
-                                <div class="col-auto py-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                        class="bi bi-wallet-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2z" />
-                                        <path
-                                            d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5z" />
-                                    </svg>
-                                </div>
-                                <div class="col-auto">
-                                    <p>Services</p>
-                                    <p>5</p>
-                                </div>
-                            </div>
-                          </a>  
-                        </div>
-                    </div>
+                    
                 </div>
 
                 <div class="row">
                     <h5 class="px-4 mt-4">Users</h5>
-                    <div class="col-4">
+                    <div class="col-6">
 
                         <div class="container">
                           <a href="<?php echo Config::SITEURL; ?>Super Admin panles/all_users.php" class="nav-link">
@@ -288,7 +268,7 @@ if (!isset($_SESSION['user_id'])) {
                           </a>  
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6">
                         <div class="container">
                           <a href="<?php echo Config::SITEURL; ?>Super Admin panles/all_admin.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
