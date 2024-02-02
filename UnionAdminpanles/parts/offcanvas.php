@@ -1,85 +1,3 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UniConnect Nav bar</title>
-    <link rel="shortcut icon" href="./picuters/logo/2-b.png" type="image/x-icon">
-
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./css/main.css">
-
-</head>
-
-<body>
-
-    <div class="container-fluid">
-<!-------------------------------------------------------------------------------------------->
-        <div class=""> <!--top nav bar-->
-
-            <nav class="navbar fixed-top " style=>
-                <div class="container-fluid bg-body-tertiary shadow p-2 mb-1 bg-body-tertiary rounded">
-
-                    <a class="navbar-brand" href="./admin-index.html">
-                        <span><img src="./picuters/logo/2-b.png" width="60" height="60"></span>
-                        <span class="px-1">UniConnect </span>
-                        <span class="px-1"> </span>
-                    </a>
-
-                    <form class="d-flex">                           
-                                
-                        <input class="form-control me-2" type="search" placeholder="Search (ID,Names)" aria-label="Search">
-                        <button class="btn btn-primary  col-auto py-1" type="submit">Search</button>
-                                                                                 
-                    </form>
-                    
-                    <div class="row">
-
-                        <div class="col-sm py-1">
-                            <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#notifictions"
-                                aria-controls="notifictions"><img src="./picuters/icons/bell-fill.svg" alt="" width="20"
-                                    height="20"></button>
-
-                        </div>
-                        <div class="col-sm py-1">
-                            <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#nav-bar"
-                                aria-controls="nav-bar"><img src="./picuters/icons/Menu.svg" alt="" width="30"
-                                    height="30"></button>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!--notifications-->
-            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-                id="notifictions" aria-labelledby="offcanvasScrollingLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Notifications</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <p> </p>
-
-                    <div class="alert alert-primary" role="alert">
-                        A simple primary alert with <a href="#" class="alert-link">See More</a>. Give it a click if you
-                        like.
-                        <div class="text-end">
-                            <small><span>2023/12/27</span> <span>9:00 AM</span> </small>
-                        </div>
-
-                    </div>
-
-
-                </div>
-            </div>
-
-
-
-
 
             <!--nav bar-->
             <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
@@ -110,7 +28,7 @@
                                                 d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z" />
                                             <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z" />
                                         </svg>
-                                        Super Admin
+                                        Union Admin
                                     </span>
                                 </div>
                             </div>
@@ -126,7 +44,7 @@
 
 
                         <li>
-                            <a href="./admin-index.html" class="nav-link  them-color ">
+                            <a href="<?php echo Config::SITEURL; ?>UnionAdminpanles/index.php" class="nav-link  them-color ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-speedometer2" viewBox="0 0 16 16">
                                     <path
@@ -139,7 +57,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-news.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL; ?>UnionAdminpanles/news.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-stickies-fill" viewBox="0 0 16 16">
                                     <path
@@ -151,7 +69,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-Events.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL; ?>UnionAdminpanles/Events.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
                                     <path
@@ -161,7 +79,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-reminders.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL; ?>UnionAdminpanles/Reminders.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-bell-fill" viewBox="0 0 16 16">
                                     <path
@@ -171,7 +89,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-tickets.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL; ?>UnionAdminpanles/Tickets.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-ticket-perforated-fill" viewBox="0 0 16 16">
                                     <path
@@ -181,7 +99,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-products.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL; ?>UnionAdminpanles/Products.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-box-seam-fill" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -191,7 +109,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-services.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL; ?>UnionAdminpanles/Services.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-wallet-fill" viewBox="0 0 16 16">
                                     <path
@@ -215,16 +133,18 @@
                                     Orders
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item " href="./admin-tickets-orders.html">Tickets Orders</a></li>
-                                    <li><a class="dropdown-item" href="./admin-product-orders.html">Products Orders</a></li>
-                                    <li><a class="dropdown-item" href="./admin-services-orders.html">Services Orders</a></li>
+                                    <li><a class="dropdown-item " href="<?php echo Config::SITEURL; ?>UnionAdminpanles/Tickets_orders.php">Tickets Orders</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="<?php echo Config::SITEURL; ?>UnionAdminpanles/Product_orders.php">Products Orders</a>
+                                    </li>
+                                    
                                 </ul>
                             </div>
                         </li>
 
 
                         <li>
-                            <a href="./admin-notifications.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL; ?>UnionAdminpanles/Notifications.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-bell-fill" viewBox="0 0 16 16">
                                     <path
@@ -234,42 +154,11 @@
                             </a>
                         </li>
 
+                        
+                        
+                
                         <li>
-                            <a href="./admin-users.html" class="nav-link link-body-emphasis">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-people-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                                </svg>
-                                Users
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./admin-admins.html" class="nav-link link-body-emphasis">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-person-workspace" viewBox="0 0 16 16">
-                                    <path
-                                        d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                                    <path
-                                        d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z" />
-                                </svg>
-                                Admins
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./admin-feedbacks.html" class="nav-link link-body-emphasis ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-wechat" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.176 14.429c-2.665 0-4.826-1.8-4.826-4.018 0-2.22 2.159-4.02 4.824-4.02S16 8.191 16 10.411c0 1.21-.65 2.301-1.666 3.036a.324.324 0 0 0-.12.366l.218.81a.616.616 0 0 1 .029.117.166.166 0 0 1-.162.162.177.177 0 0 1-.092-.03l-1.057-.61a.519.519 0 0 0-.256-.074.509.509 0 0 0-.142.021 5.668 5.668 0 0 1-1.576.22ZM9.064 9.542a.647.647 0 1 0 .557-1 .645.645 0 0 0-.646.647.615.615 0 0 0 .09.353Zm3.232.001a.646.646 0 1 0 .546-1 .645.645 0 0 0-.644.644.627.627 0 0 0 .098.356" />
-                                    <path
-                                        d="M0 6.826c0 1.455.781 2.765 2.001 3.656a.385.385 0 0 1 .143.439l-.161.6-.1.373a.499.499 0 0 0-.032.14.192.192 0 0 0 .193.193c.039 0 .077-.01.111-.029l1.268-.733a.622.622 0 0 1 .308-.088c.058 0 .116.009.171.025a6.83 6.83 0 0 0 1.625.26 4.45 4.45 0 0 1-.177-1.251c0-2.936 2.785-5.02 5.824-5.02.05 0 .1 0 .15.002C10.587 3.429 8.392 2 5.796 2 2.596 2 0 4.16 0 6.826m4.632-1.555a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0m3.875 0a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0" />
-                                </svg>
-                                Feedbacks
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./admin-profile.html" class="nav-link link-body-emphasis ">
+                            <a href="<?php echo Config::SITEURL; ?>UnionAdminpanles/Profile.php" class="nav-link link-body-emphasis ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-person-circle" viewBox="0 0 16 16">
                                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -287,7 +176,7 @@
                     <div class="col-12 py-4">
 
                         <div class="col-12 text-center py-2">
-                            <a href="./admin-login_page.html">
+                            <a href="">
                                 <button type="button" class="btn btn-primary">Log Out</button>
                             </a>
 
@@ -297,18 +186,4 @@
             </div>
         </div>
     </div>
-<!-------------------------------------------------------------------------------------------------------------------------------------------------->
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-
-
-
-
-
-
-</body>
-
-</html>
+    <!-------------------------------------------------------------------------------------------------------------------------------------------------->
