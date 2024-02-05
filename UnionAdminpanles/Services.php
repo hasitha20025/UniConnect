@@ -19,7 +19,7 @@ if (!isset($_SESSION['user_id'])) {
         <h5 class="px-1 mt-1 py-3">Services Dashboard</h5>
 
         <div class="text-end py-2">
-          <a href="./add-Services-form.html">
+          <a href="<?php echo Config::SITEURL?>UnionAdminpanles/additions/addServices.php">
             <button type="button" class="btn btn-primary px-3 py-2">
               + Add Services
             </button>
@@ -43,98 +43,50 @@ if (!isset($_SESSION['user_id'])) {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">001</th>
-                <td>ID1001</td>
-                <td>
-                  <img
-                    src="./picuters/samples/s-1.png"
-                    alt=""
-                    width="100"
-                    height="100%"
-                  />
-                </td>
-                <td>Title</td>
-                <td>Services category</td>
-                <td>2023/12/25</td>
-                <td>Descriptions</td>
-                <td>99.99</td>
-                <td>
-                    <div class="form-check form-switch">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        role="switch"
-                        id="flexSwitchCheckDefault"
-                      />
-                      <label
-                        class="form-check-label"
-                        for="flexSwitchCheckDefault"
-                      ></label>
-                    </div>
-                </td>
-                <td>
-                  <div
-                    class="btn-group"
-                    role="group"
-                    aria-label="Basic outlined example"
-                  >
-                    <button type="button" class="btn btn-outline-warning">
-                      Edit
-                    </button>
-                    <button type="button" class="btn btn-outline-danger">
-                      Delete
-                    </button>
-                  </div>
-                </td>
-              </tr>
 
-              <tr>
-                <th scope="row">001</th>
-                <td>ID1001</td>
-                <td>
-                  <img
-                    src="./picuters/samples/s-2.png"
-                    alt=""
-                    width="100"
-                    height="100%"
-                  />
-                </td>
-                <td>Title</td>
-                <td>Services category</td>
-                <td>2023/12/25</td>
-                <td>Descriptions</td>
-                <td>99.99</td>
-                <td>
-                    <div class="form-check form-switch">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        role="switch"
-                        id="flexSwitchCheckDefault"
-                      />
-                      <label
-                        class="form-check-label"
-                        for="flexSwitchCheckDefault"
-                      ></label>
-                    </div>
-                </td>
-                <td>
-                  <div
-                    class="btn-group"
-                    role="group"
-                    aria-label="Basic outlined example"
-                  >
-                    <button type="button" class="btn btn-outline-warning">
-                      Edit
-                    </button>
-                    <button type="button" class="btn btn-outline-danger">
-                      Delete
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
+<?php
+// Fetch products from the database
+$sql = "SELECT * FROM tbl_service";
+$result = mysqli_query($conn, $sql);
+// Check if any rows were returned
+if (mysqli_num_rows($result) > 0) {
+  $counter = 1;
+  while ($row = mysqli_fetch_assoc($result)) {
+?>
+    <tr>
+    <th scope="row"><?php echo $counter++; ?></th>
+      <td><?php echo $row['id']; ?></td>
+      <td>
+        <img
+          src="<?php echo Config::SITEURL; ?>images/Services/<?php echo $row['image']; ?>"
+          alt=""
+          width="100"
+          height="100%"
+        />
+      </td>
+      <td><?php echo $row['titile']; ?></td>
+      <td><?php echo $row['category']; ?></td>
+      <td><?php echo $row['date']; ?></td>
+      <td><?php echo $row['description']; ?></td>
+      <td><?php echo $row['price']; ?></td>
+      <td>
+      <?php echo $row['availability']; ?>
+      </td>
+      <td>
+      
+        <button type="button" class="btn btn-outline-warning" onclick="editRecord(<?php echo $row['id']; ?>)">Edit</button>
+        <button type="button" class="btn btn-outline-danger" onclick="deleteRecord(<?php echo $row['id']; ?>)">Delete</button>
+      </td>
+      
+    </tr>
+<?php
+  }
+} else {
+  // No products found
+  echo '<tr><td colspan="10">No products available</td></tr>';
+}
+?>
+</tbody>
           </table>
         </div>
       </div>

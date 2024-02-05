@@ -130,18 +130,22 @@ if (isset($_POST['submit'])) {
 
     if (isset($_FILES['image']['name'])) {
         $image_name = $_FILES['image']['name'];
-
+        
         if ($image_name != "") {
-            $ext = end(explode('.', $image_name));
-            $image_name = "EDIT_event" . rand(0000, 9999) . '.' . $ext;
-
+            // Explode the string into an array
+            $image_name_parts = explode('.', $image_name);
+      
+            // Get the last element of the array
+            $ext = end($image_name_parts);
+      
+            $image_name = "Ticket_" . rand(0000, 9999) . '.' . $ext;
+      
             $source_path = $_FILES['image']['tmp_name'];
-            $destination_path = "/xampp/htdocs/UniConnect/images/Event/" . $image_name;
-
-            move_uploaded_file($source_path, $destination_path);
+            $destination_path = "/xampp/htdocs/UniConnect/images/Ticket/" . $image_name;
+      
+            $upload = move_uploaded_file($source_path, $destination_path);
         } else {
-            // Image not available, use the previous image name
-            $image_name = $current_image;
+            $image_name =  $current_image; // If no image is uploaded
         }
     } else {
         // If no image is uploaded, use the previous image name

@@ -97,7 +97,7 @@ if (!isset($_SESSION['user_id'])) {
 
         function editRecord(newsId) {
             // Redirect to the edit_news.php page with the newsId as a parameter
-            window.location.href = '<?php echo Config::SITEURL?>/Super Admin panles/edit_Notification.php?id=' + newsId;
+            window.location.href = '<?php echo Config::SITEURL?>UnionAdminpanles/edit/editNotification.php?id=' + newsId;
         }
 
 

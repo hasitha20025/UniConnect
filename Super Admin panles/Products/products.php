@@ -71,7 +71,7 @@ if (!isset($_SESSION['user_id'])) {
                 <td><?php echo $row['id']; ?></td>
                 <td>
                   <img
-                    src="./picuters/samples/<?php echo $row['img']; ?>"
+                    src="<?php echo Config::SITEURL; ?>images/products/<?php echo $row['img']; ?>"
                     alt=""
                     width="100"
                     height="100%"
@@ -105,31 +105,29 @@ if (!isset($_SESSION['user_id'])) {
       </div>
     </div>
     <script>
-        function deleteRecord(newsId) {
-            if (confirm('Are you sure you want to delete this record?')) {
-                $.ajax({
-                    type: 'POST',
-                    url: '<?php echo Config::SITEURL?>/Super Admin panles/parts/delete_notifications.php', // Adjust the path accordingly
-                    data: { id: newsId },
-                    success: function (response) {
-                        console.log(response);
-                        location.reload();
-                    },
-                    error: function (error) {
-                        console.error('Error deleting record:', error);
-                    }
-                });
-            }
+    function deleteRecord(productId) {
+        if (confirm('Are you sure you want to delete this record?')) {
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo Config::SITEURL?>/Super Admin panles/parts/delete_notifications.php', // Adjust the path accordingly
+                data: { id: productId },
+                success: function (response) {
+                    console.log(response);
+                    location.reload();
+                },
+                error: function (error) {
+                    console.error('Error deleting record:', error);
+                }
+            });
         }
+    }
 
-        function editRecord(newsId) {
-            // Redirect to the edit_news.php page with the newsId as a parameter
-            window.location.href = '<?php echo Config::SITEURL?>/Super Admin panles/edit_Notification.php?id=' + newsId;
-        }
+    function editRecord(productId) {
+        // Redirect to the edit_news.php page with the productId as a parameter
+        window.location.href = '<?php echo Config::SITEURL?>/Super Admin panles/edit_Notification.php?id=' + productId;
+    }
+</script>
 
-
-
-    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
