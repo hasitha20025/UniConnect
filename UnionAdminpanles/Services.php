@@ -91,6 +91,30 @@ if (mysqli_num_rows($result) > 0) {
         </div>
       </div>
     </div>
+    <script>
+    function deleteRecord(serviceId) {
+        if (confirm('Are you sure you want to delete this service?')) {
+            $.ajax({
+                type: 'POST',
+                url: '<?= Config::SITEURL ?>/UnionAdminpanles/parts/deleteServices.php',
+                data: { id: serviceId },
+                success: function (response) {
+                    console.log(response);
+                    location.reload();
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error deleting record:', xhr.responseText);
+                }
+            });
+        }
+    }
+
+    function editRecord(serviceId) {
+        // Redirect to the edit_services.php page with the serviceId as a parameter
+        window.location.href = '<?= Config::SITEURL ?>UnionAdminpanles/edit/editServices.php?id=' + serviceId;
+    }
+</script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
