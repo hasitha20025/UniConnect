@@ -92,20 +92,38 @@ include('topnavBar.php'); // Assuming the file is in the same directory
 
                     </ul>
 
-
                     <div class="col-12 py-4">
 
-                        <div class="col-12 text-center py-2">
-                            <a href="./admin-login_page.html">
-                                <button type="button" class="btn btn-primary">Log Out</button>
-                            </a>
+                    <div class="col-12 text-center py-2">
+                    <a href="#" onclick="confirmLogout()">
+                        <button type="button" class="btn btn-primary">Log Out</button>
+                    </a>
 
-                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-------------------------------------------------------------------------------------------------------------------------------------------------->
+    <script>
+function confirmLogout() {
+    // Display a confirmation dialog
+    if (confirm("Are you sure you want to log out?")) {
+        // If the user clicks "OK", proceed with logout
+        logoutAndRedirect();
+    } else {
+        // If the user clicks "Cancel", do nothing
+    }
+}
 
+function logoutAndRedirect() {
+    // Additional logout logic (if any)
 
+    // Use AJAX to notify the server about the logout
+    // This is optional and depends on your specific requirements
+    // ...
+
+    // Redirect to the logout script (PHP script to destroy the session)
+    window.location.href = "<?php echo Config::SITEURL; ?>/Super Admin panles/parts/logout.php";
+}
+</script>

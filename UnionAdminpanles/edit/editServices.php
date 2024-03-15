@@ -30,7 +30,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content rounded-4 shadow">
             <div class="modal-header p-5 pb-4 border-bottom-0">
-              <h2 class="fw-bold mb-4 fs-2">Add Services Details</h2>
+              <h2 class="fw-bold mb-4 fs-2">Edit Services Details</h2>
             </div>
 
             <div class="modal-body p-5 pt-0">

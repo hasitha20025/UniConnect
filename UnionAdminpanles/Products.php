@@ -34,7 +34,7 @@ if (!isset($_SESSION['user_id'])) {
                 <th scope="col">#No</th>
                 <th scope="col">ID</th>
                 <th scope="col">Products Picture</th>
-                <th scope="col">Products Title</th>
+                <th scope="col">Products name</th>
                 <th scope="col">Product Category</th>
                 <th scope="col">Date</th>
                 <th scope="col">Products Descriptions</th>
@@ -65,7 +65,7 @@ if (mysqli_num_rows($result) > 0) {
           height="100%"
         />
       </td>
-      <td><?php echo $row['title']; ?></td>
+      <td><?php echo $row['product_name']; ?></td>
       <td><?php echo $row['category']; ?></td>
       <td><?php echo $row['date']; ?></td>
       <td><?php echo $row['descripition']; ?></td>

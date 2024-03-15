@@ -1,6 +1,6 @@
 <?php
 include('/xampp/htdocs/UniConnect/config/constants.php');
-ob_start();
+
 
 if (isset($_GET['id'])) {
     $ticketId = $_GET['id'];
@@ -13,8 +13,7 @@ if (isset($_GET['id'])) {
             while ($rows = mysqli_fetch_assoc($res)) {
                 $current_image = $rows["img"];
                 $date = $rows["date"];
-                $title = $rows["product_name"];
-
+                $title = $rows["title"];
                 $description = $rows["descripition"];
                 $availability = $rows["availability"];
                 $price = $rows["price"];
@@ -54,7 +53,7 @@ if (isset($_GET['id'])) {
         <div class="modal-dialog" role="document">
             <div class="modal-content rounded-4 shadow">
                 <div class="modal-header p-5 pb-4 border-bottom-0">
-                    <h2 class="fw-bold mb-4 fs-2">Edit Ticket Details</h2>
+                    <h2 class="fw-bold mb-4 fs-2">Edit Products Details</h2>
                 </div>
 
                 <div class="modal-body p-5 pt-0">
@@ -63,20 +62,20 @@ if (isset($_GET['id'])) {
                    
                     <form action="editProducts.php" method="post" enctype="multipart/form-data">
                           <div class="mb-3">
-                              <label for="ticket_code" class="form-label">Ticket ID</label>
+                              <label for="ticket_code" class="form-label">Products ID</label>
                               <input type="text" class="form-control" id="ticket_code" value="<?php echo $ticketId; ?>" readonly>
                               <input type="hidden" name="ticketId" value="<?php echo $ticketId; ?>">
                           </div>
 
                           <div class="col-sm-12">
-                                <label for="image">Ticket Thumbnail</label>
+                                <label for="image">Products Thumbnail</label>
                                 <input type="file" class="form-control" name="image" id="image" />
                                 <input type="hidden" name="current_image" value="<?php echo $current_image; ?>" />
                                 <?php echo $current_image; ?>
                             </div>
 
                           <div class="mb-3">
-                              <label for="TicketTitle" class="form-label">Ticket Title</label>
+                              <label for="TicketTitle" class="form-label">Products Title</label>
                               <input type="text" class="form-control" id="TicketTitle" name="TicketTitle" value="<?php echo $title; ?>">
                           </div>
 
@@ -97,7 +96,7 @@ if (isset($_GET['id'])) {
                           </div>
 
                           <div class="mb-3">
-                              <label for="TicketDescription" class="form-label">Ticket Description</label>
+                              <label for="TicketDescription" class="form-label">Products Description</label>
                               <textarea class="form-control" id="TicketDescription" name="TicketDescription" rows="3"><?php echo $description; ?></textarea>
                           </div>
 
@@ -131,7 +130,7 @@ if (isset($_POST['submit'])) {
     $TicketPrice= $_POST['TicketPrice'];
     $new_description = $_POST['TicketDescription'];
     $availability  =  $_POST['productAvailability'];;
-    $tiket_provider=2;
+    $tiket_provider=3;
    
 
     // Check if current image is available or not
@@ -157,11 +156,11 @@ if (isset($_POST['submit'])) {
         $image_name = $current_image;
     }
 
-    $updateQuery = "UPDATE tbl_products  SET product_name = '$new_title', price = '$TicketPrice', descripition = '$new_description',  img = '$image_name',date = '$new_date', availability = '$availability',PO_ID = '$tiket_provider' WHERE id = $ticketId";
+    $updateQuery = "UPDATE tbl_products SET product_name = '$new_title', price = '$TicketPrice', descripition = '$new_description',  img = '$image_name',date = '$new_date', availability = '$availability',PO_ID = '$tiket_provider' WHERE id = $ticketId";
 
     if ($conn->query($updateQuery) === TRUE) {
         // Redirect to the news dashboard or display a success message
-        header("Location: ../Products.php?id=".$ticketId);
+        header("Location: ../products.php?id=".$ticketId);
         exit();
     } else {
         echo "Error updating record: " . $conn->error;
