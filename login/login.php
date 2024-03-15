@@ -89,17 +89,33 @@ if ($result->num_rows == 1) {
         $_SESSION['username'] = $row['email'];
         $_SESSION['role'] = $row['role_id'];
 
-
+        
 
         // Redirect based on user role
         if ($row['role_id'] == 1) { // Role ID 1 represents admin
+
           header("Location: " . Config::SITEURL . "Super Admin panles/index.php?user_id=" . $_SESSION['user_id']);
 
 
         } else if ($row['role_id'] == 2) { // Role ID 2 represents UnionAdmin
+
             header("Location: " . Config::SITEURL . "UnionAdminpanles/index.php?user_id=" . $_SESSION['user_id']);
-        } else if ($row['role_id'] == 3) { // Role ID 3 represents lecture
-            header("Location:/APMS-newV2.00/Lectures_panel/index.php?user_id=" . $_SESSION['user_id']);
+
+        } else if ($row['role_id'] == 5) { // Role ID 3 represents  service onwers
+
+            header("Location: " . Config::SITEURL . "ServiessOwners/index.php?user_id=" . $_SESSION['user_id']);
+
+        }else if ($row['role_id'] == 4) { // Role ID 3 represents prodcut sellers
+            
+            header("Location: " . Config::SITEURL . "productSellers/index.php?user_id=" . $_SESSION['user_id']);
+
+        }else if ($row['role_id'] == 3) { // Role ID 3 represents prodcut sellers
+            
+            header("Location: " . Config::SITEURL . "ClubPersident/index.php?user_id=" . $_SESSION['user_id']);
+        }
+        else if ($row['role_id'] == 6) { // Role ID 3 represents prodcut sellers
+            
+            header("Location: " . Config::SITEURL . "Users_panles/index.php?user_id=" . $_SESSION['user_id']);
         }
         exit();
     } else {
@@ -110,7 +126,7 @@ if ($result->num_rows == 1) {
 }
 
 // Redirect back to login page if login fails
-header("Location:index.php");
+header("Location:login.php");
 exit();
 }
 
