@@ -1,9 +1,18 @@
+<?php
+
+include("./parts/top_navbar.php");
+include("./parts/offcanvas.php");
+
+if (!isset($_SESSION['user_id'])) {
+            header("Location: " . Config::SITEURL . "ClubPersident/index.php");
+            exit();
+        }
+
+        $user_id = $_SESSION['user_id'];
+
+?>
 
 
-    <br />
-    <br />
-    <br />
-    <br />
     <br />
 
     <div class="container-fluid">
@@ -15,7 +24,7 @@
                     
                         <div class="col-3 ">                       
                             <div class="container  ">
-                                <a href="./admin-news.html" class="nav-link">
+                                <a href="<?php echo Config::SITEURL; ?>ClubPersident/news.php" class="nav-link">
                                 <div class="row border border-1 rounded  shadow bg-body rounded">
                                     <div class="col-auto p-4">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -38,7 +47,7 @@
                     
                     <div class="col-3 ">
                         <div class="container ">
-                            <a href="./admin-Events.html" class="nav-link">
+                            <a href="<?php echo Config::SITEURL; ?>ClubPersident/Events.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto p-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -59,7 +68,7 @@
 
                     <div class="col-3 ">
                         <div class="container">
-                        <a href="./admin-reminders.html" class="nav-link">
+                        <a href="<?php echo Config::SITEURL; ?>ClubPersident/Reminders.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto p-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -80,7 +89,7 @@
 
                     <div class="col-3 ">
                         <div class="container">
-                        <a href="./admin-notifications.html" class="nav-link">
+                        <a href="<?php echo Config::SITEURL; ?>ClubPersident/Notifications.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto p-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bell-slash-fill" viewBox="0 0 16 16">
@@ -105,7 +114,7 @@
                     <h5 class="px-4 mt-3">Sell Items</h5>
                     <div class="col-4">
                         <div class="container">
-                        <a href="./admin-tickets.html" class="nav-link">
+                        <a href="<?php echo Config::SITEURL; ?>ClubPersident/Tickets.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto p-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -124,7 +133,7 @@
                     </div>
                     <div class="col-4">
                         <div class="container">
-                            <a href="./admin-products.html" class="nav-link">
+                            <a href="<?php echo Config::SITEURL; ?>ClubPersident/Products.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto p-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -143,7 +152,7 @@
                     </div>
                     <div class="col-4">
                         <div class="container">
-                          <a href="./admin-services.html" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>ClubPersident/Services.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto p-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -168,9 +177,9 @@
 
                 <div class="row">
                     <h5 class="px-4 mt-3">Orders</h5>
-                    <div class="col-4">
+                    <div class="col-6">
                         <div class="container">
-                          <a href="./admin-tickets-orders.html" class="nav-link">
+                          <a href="<?php echo Config::SITEURL; ?>ClubPersident/Tickets_orders.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto p-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -187,9 +196,9 @@
                           </a>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6">
                         <div class="container">
-                           <a href="./admin-product-orders.html" class="nav-link">
+                           <a href="<?php echo Config::SITEURL; ?>ClubPersident/Product_orders.php" class="nav-link">
                             <div class="row border border-1 rounded shadow bg-body rounded">
                                 <div class="col-auto p-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -206,27 +215,7 @@
                           </a>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="container">
-                           <a href="./admin-services-orders.html" class="nav-link">
-                            <div class="row border border-1 rounded shadow bg-body rounded">
-                                <div class="col-auto p-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
-                                        class="bi bi-wallet-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2z" />
-                                        <path
-                                            d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5z" />
-                                    </svg>
-                                </div>
-                                <div class="col-auto py-4">
-                                    <p>Services</p>
-                                    <p>5</p>
-                                </div>
-                            </div>
-                          </a>  
-                        </div>
-                    </div>
+                    
                 </div>
 
                 

@@ -113,7 +113,7 @@ if (isset($_SESSION['user_id'])) {
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-tickets.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/Ticket/tickets.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-ticket-perforated-fill" viewBox="0 0 16 16">
                                     <path
@@ -123,7 +123,7 @@ if (isset($_SESSION['user_id'])) {
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-products.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/Products/products.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-box-seam-fill" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -133,7 +133,7 @@ if (isset($_SESSION['user_id'])) {
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-services.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/Services/services.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-wallet-fill" viewBox="0 0 16 16">
                                     <path
@@ -157,12 +157,12 @@ if (isset($_SESSION['user_id'])) {
                                     Orders
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item " href="./admin-tickets-orders.html">Tickets Orders</a>
+                                    <li><a class="dropdown-item " href="<?php echo Config::SITEURL?>/Super Admin panles/Orders/selection_ticktes.php">Tickets Orders</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="./admin-product-orders.html">Products Orders</a>
+                                    <li><a class="dropdown-item" href="<?php echo Config::SITEURL?>/Super Admin panles/Orders/Selection_products.php">Products Orders</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="./admin-services-orders.html">Services Orders</a>
-                                    </li>
+                                    
+                                    
                                 </ul>
                             </div>
                         </li>
@@ -180,7 +180,7 @@ if (isset($_SESSION['user_id'])) {
                         </li>
 
                         <li>
-                            <a href="./admin-users.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/all_users.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-people-fill" viewBox="0 0 16 16">
                                     <path
@@ -190,7 +190,7 @@ if (isset($_SESSION['user_id'])) {
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-admins.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/all_admin.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-person-workspace" viewBox="0 0 16 16">
                                     <path
@@ -202,7 +202,7 @@ if (isset($_SESSION['user_id'])) {
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-feedbacks.html" class="nav-link link-body-emphasis ">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/admin_feedbacks.php" class="nav-link link-body-emphasis ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-wechat" viewBox="0 0 16 16">
                                     <path

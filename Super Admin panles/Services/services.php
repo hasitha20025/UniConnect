@@ -68,7 +68,7 @@ if (!isset($_SESSION['user_id'])) {
                 <td><?php echo $row['id']; ?></td>
                 <td>
                   <img
-                    src="./picuters/samples/<?php echo $row['image']; ?>"
+                    src="<?php echo Config::SITEURL; ?>images/Services/<?php echo $row['image']; ?>"
                     alt=""
                     width="100"
                     height="100%"

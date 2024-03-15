@@ -77,7 +77,7 @@ if (!isset($_SESSION['user_id'])) {
                     height="100%"
                   />
                 </td>
-                <td><?php echo $row['title']; ?></td>
+                <td><?php echo $row['product_name']; ?></td>
                 <td><?php echo $row['category']; ?></td>
                 <td><?php echo $row['date']; ?></td>
                 <td><?php echo $row['descripition']; ?></td>
@@ -107,24 +107,18 @@ if (!isset($_SESSION['user_id'])) {
     <script>
     function deleteRecord(productId) {
         if (confirm('Are you sure you want to delete this record?')) {
-            $.ajax({
-                type: 'POST',
-                url: '<?php echo Config::SITEURL?>/Super Admin panles/parts/delete_notifications.php', // Adjust the path accordingly
-                data: { id: productId },
-                success: function (response) {
-                    console.log(response);
-                    location.reload();
-                },
-                error: function (error) {
-                    console.error('Error deleting record:', error);
-                }
-            });
+          
+       
+       window.location.href = '<?php echo Config::SITEURL?>Super Admin panles/parts/deleteProducts.php?id=' + productId;
+      
+      
+ 
         }
     }
 
     function editRecord(productId) {
         // Redirect to the edit_news.php page with the productId as a parameter
-        window.location.href = '<?php echo Config::SITEURL?>/Super Admin panles/edit_Notification.php?id=' + productId;
+        window.location.href = '<?php echo Config::SITEURL?>Super Admin panles/Products/editProducts.php?id=' + productId;
     }
 </script>
 

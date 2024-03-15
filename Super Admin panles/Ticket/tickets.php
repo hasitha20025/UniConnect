@@ -66,7 +66,7 @@ if (!isset($_SESSION['user_id'])) {
                 <td><?php echo $row['id']; ?></td>
                 <td>
                   <img
-                    src="./picuters/samples/<?php echo $row['img']; ?>"
+                    src="<?php echo Config::SITEURL; ?>images/Ticket/<?php echo $row['img']; ?>"
                     alt=""
                     width="100"
                     height="100%"
@@ -102,26 +102,18 @@ if (!isset($_SESSION['user_id'])) {
       </div>
     </div>
     <script>
-        function deleteRecord(newsId) {
-            if (confirm('Are you sure you want to delete this record?')) {
-                $.ajax({
-                    type: 'POST',
-                    url: '<?php echo Config::SITEURL?>/Super Admin panles/parts/delete_notifications.php', // Adjust the path accordingly
-                    data: { id: newsId },
-                    success: function (response) {
-                        console.log(response);
-                        location.reload();
-                    },
-                    error: function (error) {
-                        console.error('Error deleting record:', error);
-                    }
-                });
-            }
-        }
+       function deleteRecord(productId) {
+    if (confirm('Are you sure you want to delete this product?')) {
+       
+          window.location.href = '<?php echo Config::SITEURL?>Super Admin panles/parts/deleteTickets.php?id=' + productId;
+         
+         
+    }
+}
 
-        function editRecord(newsId) {
+        function editRecord(productId) {
             // Redirect to the edit_news.php page with the newsId as a parameter
-            window.location.href = '<?php echo Config::SITEURL?>/Super Admin panles/edit_Notification.php?id=' + newsId;
+            window.location.href = '<?php echo Config::SITEURL?>Super Admin panles/Ticket/editTickets.php?id=' + productId;
         }
 
 
