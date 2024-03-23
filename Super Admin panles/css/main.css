@@ -77,3 +77,20 @@
     margin-top: 7%;
 }
 
+.visible-content {
+    display: table-row;
+}
+
+.hidden-content {
+    display: none;
+}
+
+
+.visible-content {
+        color: green; /* or your preferred color for "Still Show" */
+    }
+
+.hidden-content {
+        color: red; /* or your preferred color for "Not in Show" */
+    }
+

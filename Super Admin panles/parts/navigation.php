@@ -1,4 +1,28 @@
 
+<?php 
+
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+    $sql = "SELECT * from super_admin WHERE id = $user_id";
+    $res = mysqli_query($conn, $sql);
+
+    if ($res == TRUE) {
+        $count = mysqli_num_rows($res);
+        if ($count > 0) {
+            while ($rows = mysqli_fetch_assoc($res)) {
+                
+                $image = $rows["image"];
+                $F_name = $rows["F_name"];
+                $L_name = $rows["L_name"];
+                $email = $rows["email"];
+                $phone = $rows["phone"];
+                $password = $rows["password"];
+            }
+        }
+    }
+}
+
+?>
             <!--nav bar-->
             <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
                 id="nav-bar" aria-labelledby="offcanvasScrollingLabel">
@@ -10,14 +34,14 @@
                             <div class="col-auto py-1">
                                 <a href="./admin-profile.html"
                                     class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                                    <img src="./picuters/profile-pic/p-1.jpg" class="rounded-circle" alt="" width="60"
+                                    <img src="<?php echo Config::SITEURL?>/images/admins/super_admin/<?php echo $image; ?>" class="rounded-circle" alt="" width="60"
                                         height="60">
                                 </a>
                             </div>
                             <div class="col-auto py-1">
                                 <div class="row">
                                     <span class="fs-4 px-2">
-                                        <h5>Hasitha Dhananjaya </h5>
+                                        <h5><?php echo $F_name.' '.$L_name ?> </h5>
                                     </span>
                                 </div>
                                 <div class="row ">
@@ -44,7 +68,7 @@
 
 
                         <li>
-                            <a href="./admin-index.html" class="nav-link  them-color ">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/index.php" class="nav-link  them-color ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-speedometer2" viewBox="0 0 16 16">
                                     <path
@@ -57,7 +81,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-news.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/admin_news.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-stickies-fill" viewBox="0 0 16 16">
                                     <path
@@ -69,7 +93,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-Events.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/Events.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
                                     <path
@@ -79,7 +103,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-reminders.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/Reminders.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-bell-fill" viewBox="0 0 16 16">
                                     <path
@@ -89,7 +113,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-tickets.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/Ticket/tickets.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-ticket-perforated-fill" viewBox="0 0 16 16">
                                     <path
@@ -99,7 +123,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-products.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/Products/products.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-box-seam-fill" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -109,7 +133,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-services.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/Services/services.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-wallet-fill" viewBox="0 0 16 16">
                                     <path
@@ -133,19 +157,19 @@
                                     Orders
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item " href="./admin-tickets-orders.html">Tickets Orders</a>
+                                    <li><a class="dropdown-item " href="<?php echo Config::SITEURL?>/Super Admin panles/Orders/selection_ticktes.php">Tickets Orders</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="./admin-product-orders.html">Products Orders</a>
+                                    <li><a class="dropdown-item" href="<?php echo Config::SITEURL?>/Super Admin panles/Orders/Selection_products.php">Products Orders</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="./admin-services-orders.html">Services Orders</a>
-                                    </li>
+                                    
+                                    
                                 </ul>
                             </div>
                         </li>
 
 
                         <li>
-                            <a href="./admin-notifications.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/notifications.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-bell-fill" viewBox="0 0 16 16">
                                     <path
@@ -156,7 +180,7 @@
                         </li>
 
                         <li>
-                            <a href="./admin-users.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/all_users.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-people-fill" viewBox="0 0 16 16">
                                     <path
@@ -166,7 +190,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-admins.html" class="nav-link link-body-emphasis">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/all_admin.php" class="nav-link link-body-emphasis">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-person-workspace" viewBox="0 0 16 16">
                                     <path
@@ -178,7 +202,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-feedbacks.html" class="nav-link link-body-emphasis ">
+                            <a href="<?php echo Config::SITEURL?>/Super Admin panles/admin_feedbacks.php" class="nav-link link-body-emphasis ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-wechat" viewBox="0 0 16 16">
                                     <path
@@ -190,15 +214,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./admin-profile.html" class="nav-link link-body-emphasis ">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-person-circle" viewBox="0 0 16 16">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                                    <path fill-rule="evenodd"
-                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                                </svg>
-                                Profile
-                            </a>
+                        <a href="<?php echo Config::SITEURL; ?>/Super Admin panles/profile.php?user_id=<?php echo $_SESSION['user_id']; ?>" class="nav-link link-body-emphasis">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+    </svg>
+    Profile
+</a>
                         </li>
 
 
@@ -208,9 +230,9 @@
                     <div class="col-12 py-4">
 
                         <div class="col-12 text-center py-2">
-                            <a href="./admin-login_page.html">
-                                <button type="button" class="btn btn-primary">Log Out</button>
-                            </a>
+                        <a href="#" onclick="confirmLogout()">
+                            <button type="button" class="btn btn-primary">Log Out</button>
+                        </a>
 
                         </div>
                     </div>
@@ -218,3 +240,25 @@
             </div>
         </div>
     </div>
+    <script>
+function confirmLogout() {
+    // Display a confirmation dialog
+    if (confirm("Are you sure you want to log out?")) {
+        // If the user clicks "OK", proceed with logout
+        logoutAndRedirect();
+    } else {
+        // If the user clicks "Cancel", do nothing
+    }
+}
+
+function logoutAndRedirect() {
+    // Additional logout logic (if any)
+
+    // Use AJAX to notify the server about the logout
+    // This is optional and depends on your specific requirements
+    // ...
+
+    // Redirect to the logout script (PHP script to destroy the session)
+    window.location.href = "<?php echo Config::SITEURL; ?>/Super Admin panles/parts/logout.php";
+}
+</script>
