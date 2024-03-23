@@ -152,9 +152,9 @@ https://www.tooplate.com/view/2125-artxibition
                                                         <div class="category">
                                                             <h6>Category</h6>
                                                             <ul>
-                                                                <li><a href="#">Pop Music</a></li>
-                                                                <li><a href="#">Rock Music</a></li>
-                                                                <li><a href="#">Hip Hop Music</a></li>
+                                                                <li><a href="#">ART</a></li>
+                                                                <li><a href="#">Club</a></li>
+                                                                <li><a href="#">Degree</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -162,9 +162,9 @@ https://www.tooplate.com/view/2125-artxibition
                                                         <div class="venues">
                                                             <h6>Venues</h6>
                                                             <ul>
-                                                                <li><a href="#">Radio City Musical Hall</a></li>
-                                                                <li><a href="#">Madison Square Garden</a></li>
-                                                                <li><a href="#">Royce Hall</a></li>
+                                                                <li><a href="#">A1</a></li>
+                                                                <li><a href="#">E2</a></li>
+                                                                <li><a href="#">MLT</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -178,7 +178,7 @@ https://www.tooplate.com/view/2125-artxibition
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                                 <div class="left-content">
-                                                                    <h4>Tiger Land Festival</h4>
+                                                                    <h4>Impetus</h4>
                                                                     <p>Lorem ipsum dolor sit amet, consectetur do adipiscing eliterirt sed eiusmod alori...</p>
                                                                     <div class="main-dark-button"><a href="event-details.html">Discover More</a></div>
                                                                 </div>
@@ -197,7 +197,7 @@ https://www.tooplate.com/view/2125-artxibition
                                                                         </li>
                                                                         <li>
                                                                             <i class="fa fa-map-marker"></i>
-                                                                            <span>Copacabana Beach, Rio de Janeiro</span>
+                                                                            <span>E2</span>
                                                                         </li>
                                                                         <li>
                                                                             <i class="fa fa-users"></i>
@@ -214,7 +214,7 @@ https://www.tooplate.com/view/2125-artxibition
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                                 <div class="left-content">
-                                                                    <h4>Super Rock Festival</h4>
+                                                                    <h4>Handawa</h4>
                                                                     <p>Lorem ipsum dolor sit amet, consectetur do adipiscing eliterirt sed eiusmod alori...</p>
                                                                     <div class="main-dark-button"><a href="event-details.html">Discover More</a></div>
                                                                 </div>
@@ -233,7 +233,7 @@ https://www.tooplate.com/view/2125-artxibition
                                                                         </li>
                                                                         <li>
                                                                             <i class="fa fa-map-marker"></i>
-                                                                            <span>Copacabana Beach, Rio de Janeiro</span>
+                                                                            <span>E2</span>
                                                                         </li>
                                                                         <li>
                                                                             <i class="fa fa-users"></i>
@@ -250,7 +250,7 @@ https://www.tooplate.com/view/2125-artxibition
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                                 <div class="left-content">
-                                                                    <h4>Rocky Hill Festival</h4>
+                                                                    <h4>Sokari</h4>
                                                                     <p>Lorem ipsum dolor sit amet, consectetur do adipiscing eliterirt sed eiusmod alori...</p>
                                                                     <div class="main-dark-button"><a href="event-details.html">Discover More</a></div>
                                                                 </div>
@@ -269,7 +269,7 @@ https://www.tooplate.com/view/2125-artxibition
                                                                         </li>
                                                                         <li>
                                                                             <i class="fa fa-map-marker"></i>
-                                                                            <span>908Copacabana Beach, Rio de Janeiro</span>
+                                                                            <span>A1</span>
                                                                         </li>
                                                                         <li>
                                                                             <i class="fa fa-users"></i>
@@ -286,7 +286,7 @@ https://www.tooplate.com/view/2125-artxibition
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                                 <div class="left-content">
-                                                                    <h4>Hip Hop Special</h4>
+                                                                    <h4>Thaala</h4>
                                                                     <p>Lorem ipsum dolor sit amet, consectetur do adipiscing eliterirt sed eiusmod alori...</p>
                                                                     <div class="main-dark-button"><a href="event-details.html">Discover More</a></div>
                                                                 </div>
@@ -305,7 +305,7 @@ https://www.tooplate.com/view/2125-artxibition
                                                                         </li>
                                                                         <li>
                                                                             <i class="fa fa-map-marker"></i>
-                                                                            <span>Copacabana Beach, Rio de Janeiro</span>
+                                                                            <span>E1/span>
                                                                         </li>
                                                                         <li>
                                                                             <i class="fa fa-users"></i>
@@ -359,9 +359,9 @@ https://www.tooplate.com/view/2125-artxibition
                                                         <div class="category">
                                                             <h6>Category</h6>
                                                             <ul>
-                                                                <li><a href="#">Pop Music</a></li>
-                                                                <li><a href="#">Rock Music</a></li>
-                                                                <li><a href="#">Hip Hop Music</a></li>
+                                                                <li><a href="#">Art</a></li>
+                                                                <li><a href="#">Club</a></li>
+                                                                <li><a href="#">Degree</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -369,9 +369,9 @@ https://www.tooplate.com/view/2125-artxibition
                                                         <div class="venues">
                                                             <h6>Venues</h6>
                                                             <ul>
-                                                                <li><a href="#">Radio City Musical Hall</a></li>
-                                                                <li><a href="#">Madison Square Garden</a></li>
-                                                                <li><a href="#">Royce Hall</a></li>
+                                                                <li><a href="#">MLT</a></li>
+                                                                <li><a href="#">A1</a></li>
+                                                                <li><a href="#">E1</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -385,7 +385,7 @@ https://www.tooplate.com/view/2125-artxibition
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                                 <div class="left-content">
-                                                                    <h4>Water Splash Festival</h4>
+                                                                    <h4>Gavel</h4>
                                                                     <p>Lorem ipsum dolor sit amet, consectetur do adipiscing eliterirt sed eiusmod alori...</p>
                                                                     <div class="main-dark-button"><a href="event-details.html">Discover More</a></div>
                                                                 </div>
@@ -421,7 +421,7 @@ https://www.tooplate.com/view/2125-artxibition
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                                 <div class="left-content">
-                                                                    <h4>Sunny Hill Festival</h4>
+                                                                    <h4>Thaala</h4>
                                                                     <p>Lorem ipsum dolor sit amet, consectetur do adipiscing eliterirt sed eiusmod alori...</p>
                                                                     <div class="main-dark-button"><a href="event-details.html">Discover More</a></div>
                                                                 </div>
@@ -440,7 +440,7 @@ https://www.tooplate.com/view/2125-artxibition
                                                                         </li>
                                                                         <li>
                                                                             <i class="fa fa-map-marker"></i>
-                                                                            <span>Copacabana Beach, Rio de Janeiro</span>
+                                                                            <span>E1</span>
                                                                         </li>
                                                                         <li>
                                                                             <i class="fa fa-users"></i>
@@ -457,7 +457,7 @@ https://www.tooplate.com/view/2125-artxibition
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                                 <div class="left-content">
-                                                                    <h4>New Rock Festival</h4>
+                                                                    <h4>Galena</h4>
                                                                     <p>Lorem ipsum dolor sit amet, consectetur do adipiscing eliterirt sed eiusmod alori...</p>
                                                                     <div class="main-dark-button"><a href="event-details.html">Discover More</a></div>
                                                                 </div>

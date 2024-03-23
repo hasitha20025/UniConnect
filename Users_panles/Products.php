@@ -143,6 +143,62 @@ https://www.tooplate.com/view/2125-artxibition
         </div>
     </div>
 </div>
+<div class="services-cards-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="path_to_image_1.jpg" alt="Service 1 Flyer">
+                    </div>
+                    <div class="service-details">
+                        <h4>Earings</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet varius magna.</p>
+                        <ul class="service-info">
+                           
+                        </ul>
+                        <div class="service-actions">
+                            <a href="#" class="purchase-icon"><i class="fa fa-shopping-cart"></i> Purchase</a>
+                            <a href="#" class="add-to-cart-icon"><i class="fa-solid fa-phone"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="path_to_image_2.jpg" alt="Service 2 Flyer">
+                    </div>
+                    <div class="service-details">
+                        <h4>Perfumes</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet varius magna.</p>
+                      
+                        <div class="service-actions">
+                            <a href="#" class="purchase-icon"><i class="fa fa-shopping-cart"></i> Purchase</a>
+                            <a href="#" class="add-to-cart-icon"><i class="fa-solid fa-phone"></i> Contact Seller</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="path_to_image_3.jpg" alt="Service 3 Flyer">
+                    </div>
+                    <div class="service-details">
+                        <h4>Teddy Bears</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet varius magna.</p>
+                       
+                        <div class="service-actions">
+                            <a href="#" class="purchase-icon"><i class="fa fa-shopping-cart"></i> Purchase</a>
+                            <a href="#" class="add-to-cart-icon"><i class="fa-solid fa-phone"></i>Contact Seller </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
             </div>
         </div>
@@ -154,53 +210,7 @@ https://www.tooplate.com/view/2125-artxibition
         </div>
     </div>
 
-    <footer>
-     
-     
-       
-        <div class="col-lg-12">
-          <div class="sub-footer">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="logo">
-                  <span>Uni<em>Connect</em></span>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="menu">
-                  <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="rent-venue.html">Products</a></li>
-                    <li><a href="shows-events.html">Tickets & Events</a></li>
-                    <li><a href="tickets.html">Services</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="social-links">
-                  <ul>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-behance"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-instagram"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>s
+   
 
     <!-- *** Subscribe *** -->
     <div class="subscribe">

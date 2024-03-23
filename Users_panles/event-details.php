@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
 
-    <title>ArtXibition Template - Event Detail Page</title>
+    <title>Event Details</title>
 
     <!-- Additional CSS Files -->
     <link
@@ -81,8 +81,8 @@ https://www.tooplate.com/view/2125-artxibition
               <ul class="nav">
                 <li><a href="./index.php">Home</a></li>
                 <li><a href="./about.php">About Us</a></li>
-                <li><a href="">Rent Venue</a></li>
                 <li><a href="./Services.php">Services</a></li>
+                <li><a href="./Products.php">Products</a></li>
                 <li>
                   <a href="./shows-events.php" class="active">Shows & Events</a>
                 </li>
@@ -125,7 +125,7 @@ https://www.tooplate.com/view/2125-artxibition
                 <div class="row">
                   <div class="col-lg-3">
                     <div class="title">
-                      <h4>Sunny Hill Festival</h4>
+                      <h4>Galena</h4>
                       <span>140 Tickets Available</span>
                     </div>
                   </div>
@@ -140,8 +140,8 @@ https://www.tooplate.com/view/2125-artxibition
                   <div class="col-lg-3">
                     <div class="place">
                       <span
-                        ><i class="fa fa-map-marker"></i>Copacabana Beach,
-                        <br />Rio de Janeiro</span
+                        ><i class="fa fa-map-marker"></i>UWU,
+                        <br />E1 hall</span
                       >
                     </div>
                   </div>
@@ -156,7 +156,7 @@ https://www.tooplate.com/view/2125-artxibition
                 <div class="row">
                   <div class="col-lg-3">
                     <div class="title">
-                      <h4>Gala Rock Festival</h4>
+                      <h4>Sokari</h4>
                       <span>128 Tickets Available</span>
                     </div>
                   </div>
@@ -171,8 +171,8 @@ https://www.tooplate.com/view/2125-artxibition
                   <div class="col-lg-3">
                     <div class="place">
                       <span
-                        ><i class="fa fa-map-marker"></i>Copacabana Beach,
-                        <br />Rio de Janeiro</span
+                        ><i class="fa fa-map-marker"></i>UWU,
+                        <br />MLT</span
                       >
                     </div>
                   </div>
@@ -187,7 +187,7 @@ https://www.tooplate.com/view/2125-artxibition
                 <div class="row">
                   <div class="col-lg-3">
                     <div class="title">
-                      <h4>Hip Hop Farm</h4>
+                      <h4>Thaala</h4>
                       <span>160 Tickets Available</span>
                     </div>
                   </div>
@@ -202,8 +202,8 @@ https://www.tooplate.com/view/2125-artxibition
                   <div class="col-lg-3">
                     <div class="place">
                       <span
-                        ><i class="fa fa-map-marker"></i>Copacabana Beach,
-                        <br />Rio de Janeiro</span
+                        ><i class="fa fa-map-marker"></i>UWU,
+                        <br />MLT</span
                       >
                     </div>
                   </div>
@@ -218,7 +218,7 @@ https://www.tooplate.com/view/2125-artxibition
                 <div class="row">
                   <div class="col-lg-3">
                     <div class="title">
-                      <h4>Balada Music</h4>
+                      <h4>Praharshana</h4>
                       <span>240 Tickets Available</span>
                     </div>
                   </div>
@@ -233,8 +233,8 @@ https://www.tooplate.com/view/2125-artxibition
                   <div class="col-lg-3">
                     <div class="place">
                       <span
-                        ><i class="fa fa-map-marker"></i>Copacabana Beach,
-                        <br />Rio de Janeiro</span
+                        ><i class="fa fa-map-marker"></i>UWU,
+                        <br />MLT</span
                       >
                     </div>
                   </div>
@@ -249,7 +249,7 @@ https://www.tooplate.com/view/2125-artxibition
                 <div class="row">
                   <div class="col-lg-3">
                     <div class="title">
-                      <h4>Beerland Festival</h4>
+                      <h4>Sokariii</h4>
                       <span>360 Tickets Available</span>
                     </div>
                   </div>
@@ -264,8 +264,8 @@ https://www.tooplate.com/view/2125-artxibition
                   <div class="col-lg-3">
                     <div class="place">
                       <span
-                        ><i class="fa fa-map-marker"></i>Copacabana Beach,
-                        <br />Rio de Janeiro</span
+                        ><i class="fa fa-map-marker"></i>UWU,
+                        <br />E1 Hall</span
                       >
                     </div>
                   </div>
@@ -280,7 +280,7 @@ https://www.tooplate.com/view/2125-artxibition
                 <div class="row">
                   <div class="col-lg-3">
                     <div class="title">
-                      <h4>Bump & Bass</h4>
+                      <h4>Thaala</h4>
                       <span>168 Tickets Available</span>
                     </div>
                   </div>
@@ -295,8 +295,8 @@ https://www.tooplate.com/view/2125-artxibition
                   <div class="col-lg-3">
                     <div class="place">
                       <span
-                        ><i class="fa fa-map-marker"></i>Copacabana Beach,
-                        <br />Rio de Janeiro</span
+                        ><i class="fa fa-map-marker"></i>A1,
+                        <br />UWU</span
                       >
                     </div>
                   </div>
@@ -365,105 +365,55 @@ https://www.tooplate.com/view/2125-artxibition
     </div>
 
     <!-- *** Footer *** -->
+       
     <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="address">
-              <h4>Sunny Hill Festival Address</h4>
-              <span
-                >5 College St NW, <br />Norcross, GA 30071<br />United
-                States</span
-              >
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li><a href="#">Info</a></li>
-                <li><a href="#">Venues</a></li>
-                <li><a href="#">Guides</a></li>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">Outreach</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="hours">
-              <h4>Open Hours</h4>
-              <ul>
-                <li>Mon to Fri: 10:00 AM to 8:00 PM</li>
-                <li>Sat - Sun: 11:00 AM to 4:00 PM</li>
-                <li>Holidays: Closed</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-12">
-            <div class="under-footer">
-              <div class="row">
-                <div class="col-lg-6">
-                  <p>São Conrado, Rio de Janeiro</p>
-                </div>
-                <div class="col-lg-6">
-                  <p class="copyright">
-                    Copyright 2021 ArtXibition Company
-
-                    <br />Design:
-                    <a
-                      rel="nofollow"
-                      href="https://www.tooplate.com"
-                      target="_parent"
-                      >Tooplate</a
-                    >
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-12">
-            <div class="sub-footer">
-              <div class="row">
-                <div class="col-lg-3">
-                  <div class="logo">
-                    <span>Art<em>Xibition</em></span>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="menu">
-                    <ul>
-                      <li><a href="./index.php" class="active">Home</a></li>
-                      <li><a href="./about.php">About Us</a></li>
-                      <li><a href="./">Rent Venue</a></li>
-                      <li><a href="./shows-events.php">Shows & Events</a></li>
-                      <li><a href="./ticket-details.php">Tickets</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="social-links">
-                    <ul>
-                      <li>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa fa-behance"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+     
+     
+       
+     <div class="col-lg-12">
+       <div class="sub-footer">
+         <div class="row">
+           <div class="col-lg-3">
+             <div class="logo">
+               <span>Uni<em>Connect</em></span>
+             </div>
+           </div>
+           <div class="col-lg-6">
+             <div class="menu">
+               <ul>
+                 <li><a href="./index.php" class="active">Home</a></li>
+                 <li><a href="./about.php">About Us</a></li>
+                 <li><a href="./Products.php">Products</a></li>
+                 <li><a href="./ticket-details.php">Tickets & Events</a></li>
+                 <li><a href="./Services.php">Services</a></li>
+               </ul>
+             </div>
+           </div>
+           <div class="col-lg-3">
+             <div class="social-links">
+               <ul>
+                 <li>
+                   <a href="#"><i class="fa fa-twitter"></i></a>
+                 </li>
+                 <li>
+                   <a href="#"><i class="fa fa-facebook"></i></a>
+                 </li>
+                 <li>
+                   <a href="#"><i class="fa fa-behance"></i></a>
+                 </li>
+                 <li>
+                   <a href="#"><i class="fa fa-instagram"></i></a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</footer>
+      
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>

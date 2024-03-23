@@ -118,11 +118,11 @@
               </div>
               <!-- <h6>Opening on Thursday, March 31st</h6> -->
               <h2>The UniConnect</h2>
-              <div class="main-white-button"> 
+              <!-- <div class="main-white-button"> 
               <button type="button" class="btn btn-light">Log in</button>
               <button type="button" class="btn btn-dark">Sing up</button>
 
-              </div>
+              </div> -->
               
             </div>
           </div>
@@ -238,7 +238,7 @@
               <div class="down-content">
                 <div class="left-content">
                   <div class="main-white-button">
-                    <a href="ticket-details.html">Purchase Tickets</a>
+                    <a href="ticket-details.php">Purchase Tickets</a>
                   </div>
                 </div>
                 <div class="right-content">
@@ -263,7 +263,7 @@
               <div class="down-content">
                 <div class="left-content">
                   <div class="main-white-button">
-                    <a href="ticket-details.html">Purchase Tickets</a>
+                    <a href="ticket-details.php">Purchase Tickets</a>
                   </div>
                 </div>
                 <div class="right-content">
@@ -290,11 +290,11 @@
               <div class="down-content">
                 <div class="left-content">
                   <div class="main-white-button">
-                    <a href="ticket-details.html">Purchase Tickets</a>
+                    <a href="ticket-details.php">Purchase Tickets</a>
                   </div>
                 </div>
                 <div class="right-content">
-                  <h4>Royce Hall</h4>
+                  <h4>UniConnect -3</h4>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur vinzi iscingelit,
                   
@@ -318,7 +318,7 @@
     <div class="coming-events">
       <div class="left-button">
         <div class="main-white-button">
-          <a href="shows-events.html">Discover Services</a>
+          <a href="Services.php">Discover Services</a>
         </div>
       </div>
       <div class="container">
@@ -326,7 +326,7 @@
           <div class="col-lg-4">
             <div class="event-item">
               <div class="thumb">
-                <a href="event-details.html"
+                <a href="Services.php"
                   ><img src="assets/images/event-01.jpg" alt=""
                 /></a>
               </div>

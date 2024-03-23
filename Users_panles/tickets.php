@@ -127,18 +127,18 @@ https://www.tooplate.com/view/2125-artxibition
                                         <div class="col-lg-3">
                                             <select value="location">
                                                 <option value="location">Location</option>
-                                                <option name="Brazil" id="Brazil">Brazil</option>
-                                                <option name="Europe" id="Europe">Europe</option>
-                                                <option name="US" id="US">US</option>
-                                                <option name="Asia" id="Asia">Asia</option>
+                                                <option name="Brazil" id="Brazil">E1</option>
+                                                <option name="Europe" id="Europe">A1</option>
+                                                <option name="US" id="US">MLT</option>
+                                                <option name="Asia" id="Asia">E2</option>
                                             </select>
                                         </div>
                                         <div class="col-lg-3">
                                             <select value="month">
                                                 <option value="month">Price</option>
-                                                <option name="min" id="min">$0 - $50</option>
-                                                <option name="standard" id="standard">$50 - $100</option>
-                                                <option name="hight" id="hight">$100 - $200</option>
+                                                <option name="min" id="min">$0 - 500</option>
+                                                <option name="standard" id="standard">500 - 1000</option>
+                                                <option name="hight" id="hight">1000 - 2000</option>
                                             </select>
                                         </div>
                                         <div class="col-lg-3">
@@ -162,15 +162,15 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="thumb">
                             <img src="assets/images/ticket-01.jpg" alt="">
                             <div class="price">
-                                <span>1 ticket<br>from <em>$25</em></span>
+                                <span>1 ticket<br>from <em>250</em></span>
                             </div>
                         </div>
                         <div class="down-content">
                             <span>There Are 150 Tickets Left For This Show</span>
-                            <h4>Wonderful Festival</h4>
+                            <h4>Thaala</h4>
                             <ul>
                                 <li><i class="fa fa-clock-o"></i> Thursday: 05:00 PM to 10:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i>908 Copacabana Beach, Rio de Janeiro</li>
+                                <li><i class="fa fa-map-marker"></i>MLT</li>
                             </ul>
                             <div class="main-dark-button">
                                 <a href="ticket-details.html">Purchase Tickets</a>
@@ -183,15 +183,15 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="thumb">
                             <img src="assets/images/ticket-02.jpg" alt="">
                             <div class="price">
-                                <span>1 ticket<br>from <em>$45</em></span>
+                                <span>1 ticket<br>from <em>45o</em></span>
                             </div>
                         </div>
                         <div class="down-content">
                             <span>There Are 200 Tickets Left For This Show</span>
-                            <h4>Golden Festival</h4>
+                            <h4>Gavel night</h4>
                             <ul>
                                 <li><i class="fa fa-clock-o"></i> Sunday: 06:00 PM to 09:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i>789 Copacabana Beach, Rio de Janeiro</li>
+                                <li><i class="fa fa-map-marker"></i>E1 Hall</li>
                             </ul>
                             <div class="main-dark-button">
                                 <a href="ticket-details.html">Purchase Tickets</a>
@@ -204,15 +204,15 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="thumb">
                             <img src="assets/images/ticket-03.jpg" alt="">
                             <div class="price">
-                                <span>1 ticket<br>from <em>$65</em></span>
+                                <span>1 ticket<br>from <em>650</em></span>
                             </div>
                         </div>
                         <div class="down-content">
                             <span>There Are 260 Tickets Left For This Show</span>
-                            <h4>Water Splash Festival</h4>
+                            <h4>Galena</h4>
                             <ul>
                                 <li><i class="fa fa-clock-o"></i> Tuesday: 07:00 PM to 11:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i>456 Copacabana Beach, Rio de Janeiro</li>
+                                <li><i class="fa fa-map-marker"></i>E1 hall</li>
                             </ul>
                             <div class="main-dark-button">
                                 <a href="ticket-details.html">Purchase Tickets</a>
@@ -230,10 +230,10 @@ https://www.tooplate.com/view/2125-artxibition
                         </div>
                         <div class="down-content">
                             <span>There Are 340 Tickets Left For This Show</span>
-                            <h4>Tiger Festival</h4>
+                            <h4>Praharshana</h4>
                             <ul>
                                 <li><i class="fa fa-clock-o"></i> Thursday: 06:40 PM to 11:40 PM</li>
-                                <li><i class="fa fa-map-marker"></i>123 Copacabana Beach, Rio de Janeiro</li>
+                                <li><i class="fa fa-map-marker"></i>A1 Hall</li>
                             </ul>
                             <div class="main-dark-button">
                                 <a href="ticket-details.html">Purchase Tickets</a>
@@ -246,15 +246,15 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="thumb">
                             <img src="assets/images/ticket-05.jpg" alt="">
                             <div class="price">
-                                <span>1 ticket<br>from <em>$30</em></span>
+                                <span>1 ticket<br>from <em>300</em></span>
                             </div>
                         </div>
                         <div class="down-content">
                             <span>There Are 420 Tickets Left For This Show</span>
-                            <h4>Woodland Festival</h4>
+                            <h4>Sokari</h4>
                             <ul>
                                 <li><i class="fa fa-clock-o"></i> Wednesday: 06:00 PM to 09:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i>1122 Copacabana Beach, Rio de Janeiro</li>
+                                <li><i class="fa fa-map-marker"></i>A2</li>
                             </ul>
                             <div class="main-dark-button">
                                 <a href="ticket-details.html">Purchase Tickets</a>
@@ -267,15 +267,15 @@ https://www.tooplate.com/view/2125-artxibition
                         <div class="thumb">
                             <img src="assets/images/ticket-06.jpg" alt="">
                             <div class="price">
-                                <span>1 ticket<br>from <em>$40</em></span>
+                                <span>1 ticket<br>from <em>400</em></span>
                             </div>
                         </div>
                         <div class="down-content">
                             <span>There Are 520 Tickets Left For This Show</span>
-                            <h4>Winter Festival</h4>
+                            <h4>Sandwani</h4>
                             <ul>
                                 <li><i class="fa fa-clock-o"></i> Saturday: 06:00 PM to 09:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i>220 Copacabana Beach, Rio de Janeiro</li>
+                                <li><i class="fa fa-map-marker"></i>A2</li>
                             </ul>
                             <div class="main-dark-button">
                                 <a href="ticket-details.html">Purchase Tickets</a>
